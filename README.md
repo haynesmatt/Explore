@@ -25,6 +25,7 @@ Navigate, share, and discover with UB Explore. Easily find your way around UB wi
 
 **Required Must-have Stories**
 * User can view feed of favorite locations uploaded by others
+* User can like post and get location of post
 * User can upload their own favorite location
 * User can view services
 * User can select a service and view map location
@@ -93,7 +94,16 @@ First protoype displaying map "Services" functionality:
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+Posts
+| Property  | Type           |Description                    |
+| --------- | -------------- |-------------------------------|
+| objectID  | Sting          | unique ID for user post       |
+| author    | Pointer to User| image author                  |
+| image     | File           | image that user posts         |
+| caption   | String         | description of image by user  |
+| likesCount| Int            | number of likes for the post  |
+| lat       | Double         | latitude of location in post  |
+| long      | Double         | longitude of location in post |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
