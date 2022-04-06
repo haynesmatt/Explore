@@ -87,6 +87,7 @@ Navigate, share, and discover with UB Explore. Easily find your way around UB wi
 
 ### [BONUS] Interactive Prototype
 First protoype displaying map "Services" functionality:
+
 ![](https://i.imgur.com/9AohS8o.gif)
 
 
