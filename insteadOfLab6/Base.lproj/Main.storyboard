@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="McB-2Z-JJV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Services-->
+        <scene sceneID="RTw-gT-h2I">
+            <objects>
+                <viewController id="ZiY-SK-6oD" customClass="ServicesViewController" customModule="insteadOfLab6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dth-TI-FV5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-91-3PJ">
+                                <rect key="frame" x="7" y="133" width="177" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="Ilf-ke-YJS"/>
+                                    <constraint firstAttribute="height" constant="111" id="mFO-rU-B1V"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Buildings" imagePadding="2" cornerStyle="large" titleAlignment="automatic">
+                                    <imageReference key="image" image="building.2.crop.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="printerButtonPressed:" destination="ZiY-SK-6oD" eventType="touchUpInside" id="4ns-hN-TGr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-Zn-pvx">
+                                <rect key="frame" x="230" y="133" width="177" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="17Q-dJ-tzz"/>
+                                    <constraint firstAttribute="width" constant="177" id="I3S-HQ-xTg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="fwC-0a-uzh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="qyv-bu-1SG"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Parking" imagePadding="16" cornerStyle="large" titleAlignment="center">
+                                    <imageReference key="image" image="parkingsign.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="parkingButtonPressed:" destination="ZiY-SK-6oD" eventType="touchUpInside" id="l30-hf-DmJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajK-lQ-dR4">
+                                <rect key="frame" x="7" y="260" width="177" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="CEW-Ty-sxY"/>
+                                    <constraint firstAttribute="height" constant="111" id="WF7-z0-XKo"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Student Housing" imagePadding="1" cornerStyle="large" titleAlignment="center">
+                                    <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="47" scale="large" weight="semibold"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRb-8Z-oc5">
+                                <rect key="frame" x="230" y="260" width="177" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="6u3-z8-Big"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="FnH-eG-D6A"/>
+                                    <constraint firstAttribute="height" constant="111" id="PWl-5e-jS9"/>
+                                    <constraint firstAttribute="width" constant="177" id="a1d-vk-fye"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Bike Racks" imagePadding="28" cornerStyle="large" titleAlignment="center">
+                                    <imageReference key="image" image="bicycle.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-VL-u3J">
+                                <rect key="frame" x="7" y="387" width="177" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="5iB-Hx-nc0"/>
+                                    <constraint firstAttribute="height" constant="111" id="t7i-CW-k4h"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Dining" imagePadding="25" cornerStyle="large" titleAlignment="center">
+                                    <imageReference key="image" image="fork.knife.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="DiningButtonPressed:" destination="ZiY-SK-6oD" eventType="touchUpInside" id="KLf-MA-TXR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-M4-aqF">
+                                <rect key="frame" x="230" y="387" width="177" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="Nm3-yc-hpf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="SHQ-A6-Z2f"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="Ye7-Ew-wKO"/>
+                                    <constraint firstAttribute="width" constant="177" id="laW-cr-qIC"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Printers" imagePadding="1" cornerStyle="large" titleAlignment="center">
+                                    <imageReference key="image" image="printer.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gkf-Sv-DsB"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="dRb-8Z-oc5" firstAttribute="top" secondItem="0Ch-Zn-pvx" secondAttribute="bottom" constant="16" id="LcE-i5-4rJ"/>
+                            <constraint firstItem="gkf-Sv-DsB" firstAttribute="trailing" secondItem="dRb-8Z-oc5" secondAttribute="trailing" constant="7" id="LqK-yN-M6I"/>
+                            <constraint firstItem="ajK-lQ-dR4" firstAttribute="leading" secondItem="gkf-Sv-DsB" secondAttribute="leading" constant="7" id="Oap-WF-7hq"/>
+                            <constraint firstItem="ajK-lQ-dR4" firstAttribute="top" secondItem="Eyg-91-3PJ" secondAttribute="bottom" constant="16" id="Ozw-mK-6g5"/>
+                            <constraint firstItem="0Ch-Zn-pvx" firstAttribute="top" secondItem="gkf-Sv-DsB" secondAttribute="top" constant="45" id="V1N-4V-QIF"/>
+                            <constraint firstItem="gkf-Sv-DsB" firstAttribute="trailing" secondItem="feZ-M4-aqF" secondAttribute="trailing" constant="7" id="WUa-Dv-HWU"/>
+                            <constraint firstItem="8Fe-VL-u3J" firstAttribute="top" secondItem="ajK-lQ-dR4" secondAttribute="bottom" constant="16" id="d0z-Lg-dAr"/>
+                            <constraint firstItem="Eyg-91-3PJ" firstAttribute="leading" secondItem="gkf-Sv-DsB" secondAttribute="leading" constant="7" id="eQX-qx-feZ"/>
+                            <constraint firstItem="ajK-lQ-dR4" firstAttribute="top" secondItem="Eyg-91-3PJ" secondAttribute="bottom" constant="16" id="l90-Jk-cku"/>
+                            <constraint firstItem="8Fe-VL-u3J" firstAttribute="leading" secondItem="gkf-Sv-DsB" secondAttribute="leading" constant="7" id="mYo-t9-o83"/>
+                            <constraint firstItem="Eyg-91-3PJ" firstAttribute="top" secondItem="gkf-Sv-DsB" secondAttribute="top" constant="45" id="nwr-Cy-OEr"/>
+                            <constraint firstItem="feZ-M4-aqF" firstAttribute="top" secondItem="dRb-8Z-oc5" secondAttribute="bottom" constant="16" id="uR4-LI-LQg"/>
+                            <constraint firstItem="0Ch-Zn-pvx" firstAttribute="top" secondItem="gkf-Sv-DsB" secondAttribute="top" constant="45" id="viJ-G0-Ftt"/>
+                            <constraint firstItem="gkf-Sv-DsB" firstAttribute="trailing" secondItem="0Ch-Zn-pvx" secondAttribute="trailing" constant="7" id="xdW-8O-hlo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Services" id="ffp-H2-Uoz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qj-zB-4wX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="-459"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" id="BYZ-38-t0r" customClass="ViewController" customModule="insteadOfLab6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDH-Wb-Z3b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aDH-Wb-Z3b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UE6-QZ-8h3"/>
+                            <constraint firstItem="aDH-Wb-Z3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZRa-g2-h0f"/>
+                            <constraint firstItem="aDH-Wb-Z3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="osb-N3-ii1"/>
+                            <constraint firstAttribute="bottom" secondItem="aDH-Wb-Z3b" secondAttribute="bottom" id="yrD-vE-1wA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="NYd-eW-quK"/>
+                    <connections>
+                        <outlet property="mapView" destination="aDH-Wb-Z3b" id="l3u-zr-gK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="319"/>
+        </scene>
+        <!--Services-->
+        <scene sceneID="QdL-8R-cdG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JXm-n8-Sb5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Services" id="Vrw-H2-lkJ">
+                        <imageReference key="image" image="mappin.and.ellipse" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ADk-hu-H67">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="tintColor" red="0.99707025289535522" green="0.99707025289535522" blue="0.99707025289535522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.31764706970000001" green="0.61568629740000003" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99707025289535522" green="0.99707025289535522" blue="0.99707025289535522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99707025289535522" green="0.99707025289535522" blue="0.99707025289535522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance" backgroundEffect="regular">
+                            <color key="backgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <barButtonItemAppearance key="buttonAppearance">
+                                <barButtonItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                </barButtonItemStateAppearance>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZiY-SK-6oD" kind="relationship" relationship="rootViewController" id="dkX-4Z-QXd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNF-Cr-Yix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="-1191"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="B12-J4-bol">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="McB-2Z-JJV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" alpha="0.90000000000000002" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r4W-Am-OwX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.58424246311187744" green="0.091047249734401703" blue="0.19157275557518005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="JXm-n8-Sb5" kind="relationship" relationship="viewControllers" id="NQI-Ih-tSX"/>
+                        <segue destination="u4F-ar-856" kind="relationship" relationship="viewControllers" id="H2g-ws-Bob"/>
+                        <segue destination="LCL-w8-mal" kind="relationship" relationship="viewControllers" id="IXl-PP-ole"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3GM-Kb-G9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-1923"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="y4o-QB-f9o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u4F-ar-856" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="oAa-QL-7pf">
+                        <imageReference key="image" image="square.grid.2x2.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IS6-0s-dJU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="tintColor" red="0.99707025289999995" green="0.99707025289999995" blue="0.99707025289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.31764706970000001" green="0.61568629740000003" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99707025289999995" green="0.99707025289999995" blue="0.99707025289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99707025289999995" green="0.99707025289999995" blue="0.99707025289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance" backgroundEffect="regular">
+                            <color key="backgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <barButtonItemAppearance key="buttonAppearance">
+                                <barButtonItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                </barButtonItemStateAppearance>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dos-81-7Gp" kind="relationship" relationship="rootViewController" id="Lqp-pN-aHx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNr-5K-zJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-1191"/>
+        </scene>
+        <!--Liked-->
+        <scene sceneID="kNF-DU-mPb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LCL-w8-mal" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Liked" id="j5g-2Q-idk">
+                        <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9kM-pq-TFx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="tintColor" red="0.99707025289999995" green="0.99707025289999995" blue="0.99707025289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.31764706970000001" green="0.61568629740000003" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99707025289999995" green="0.99707025289999995" blue="0.99707025289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99707025289999995" green="0.99707025289999995" blue="0.99707025289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance" backgroundEffect="regular">
+                            <color key="backgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <barButtonItemAppearance key="buttonAppearance">
+                                <barButtonItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                </barButtonItemStateAppearance>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pb5-Ze-eBB" kind="relationship" relationship="rootViewController" id="rbE-ji-5GN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9t-US-Rkc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2230" y="-1191"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="t0U-bs-gai">
+            <objects>
+                <viewController id="Dos-81-7Gp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2P2-uB-ilH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="a1d-7x-RVu"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feed" id="W0S-5B-Mda"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9H-YH-5Rr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-459"/>
+        </scene>
+        <!--Liked-->
+        <scene sceneID="8dg-YA-By0">
+            <objects>
+                <viewController id="Pb5-Ze-eBB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Mf-4O-oph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Nf4-fh-zad"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Liked" id="Ysi-GW-h1m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYE-pl-u6Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="-459"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bicycle.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="building.2.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="fork.knife.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="parkingsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="printer.fill" catalog="system" width="128" height="111"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
