@@ -1,0 +1,6 @@
+framework module Pods_insteadOfLab6_insteadOfLab6UITests {
+  umbrella header "Pods-insteadOfLab6-insteadOfLab6UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
