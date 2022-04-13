@@ -210,8 +210,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             ["title": "Alumni A",   "subtitle": "Arts, Athletics or Events Lot",           "latitude": 43.000716, "longitude": -78.780223],
             ["title": "Alumni C",  "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 43.001909, "longitude": -78.779976],
             ["title": "Arena",   "subtitle": "Arts, Athletics or Events Parking Lot",      "latitude": 43.000857, "longitude": -78.779418],
-            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504]
-
+            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
+            
+            ["title": "Baird B",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998401, "longitude": -78.7871],
+            ["title": "Jacobs A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998511, "longitude": -78.788302],
+            ["title": "Jacobs B",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998401, "longitude": -78.7871],
+            ["title": "Jacobs C",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998574, "longitude": -78.786113]
+//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
+//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
+//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
+//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504]
 
             ]
         
