@@ -47,11 +47,12 @@ Navigate, share, and discover with UB Explore. Easily find your way around UB wi
     *  Post includes image, caption, like button, and directions button
     *  Includes upload button to direct user to Upload Screen
     *  Includes settings button to direct user to Settings Screen
+* Specific Post Screen
+    * Allows user to like and find location of image
+    * Can scroll down to view similar posts of the same category
 * Upload Screen
     * Allows user to upload image of spot
     * User will link specific location on the given map
-* Settings Screen
-    * Given user the option to filter Home Feed posts by category
 * Services Screen
     * Select a service category to look for on campus
     * printing, food, parking, libraries, dorms
@@ -93,7 +94,6 @@ First protoype displaying map "Services" functionality:
 
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 Posts
 | Property  | Type           |Description                    |
@@ -103,9 +103,32 @@ Posts
 | image     | File           | image that user posts         |
 | caption   | String         | description of image by user  |
 | likesCount| Int            | number of likes for the post  |
+| category  | String         | category for type of image    |
 | lat       | Double         | latitude of location in post  |
 | long      | Double         | longitude of location in post |
+
+
 ### Networking
-- [Add list of network requests by screen ]
+* Home Feed Screen
+    * (Read/GET) Query all posts where user is author
+* View Post Screen
+    * (Read/GET) Query selected post
+    * (Create/POST) Create a new like on a post
+    * (Delete) Delete existing like
+    * (Read/GET) Query all posts that match category of initial post
+* Create Post Screen
+    * (Create/POST) Create a new post object
+* Profile Screen
+    * (Read/GET) Query logged in user object
+    * (Update/PUT) Update user profile image
+* Printer Map View
+    * (Read/GET) Query latitude and longitude from WEPA API
+    * (Update/PUT) Query latitude and longitude from WEPA API
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+Wepa API 
+* UB Printers URL - https://api.wepanow.com/resources/groups/23/kiosks
+    * (Group ID to be replaced with UB Group ID)
+    * URL from - https://api.wepanow.com/docs/kiosks.htm
