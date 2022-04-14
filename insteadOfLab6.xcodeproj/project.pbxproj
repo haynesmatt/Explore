@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1961A34F28078FC8006BA93B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961A34E28078FC8006BA93B /* LoginViewController.swift */; };
+		1961A35128078FFF006BA93B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961A35028078FFF006BA93B /* FeedViewController.swift */; };
 		19B0797FE7C4B96FE751B74E /* Pods_insteadOfLab6_insteadOfLab6UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30690C889F44D1CFD664AB4F /* Pods_insteadOfLab6_insteadOfLab6UITests.framework */; };
 		1F37B76B17C1180A4C2289F0 /* Pods_insteadOfLab6Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0223FC801F3D91CB179E10E5 /* Pods_insteadOfLab6Tests.framework */; };
 		5525491E2804527A00A622C9 /* CoreLocationUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5525491D2804527A00A622C9 /* CoreLocationUI.framework */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		0223FC801F3D91CB179E10E5 /* Pods_insteadOfLab6Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insteadOfLab6Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1961A34E28078FC8006BA93B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1961A35028078FFF006BA93B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		300926084E771F00B0E4D799 /* Pods_insteadOfLab6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insteadOfLab6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30690C889F44D1CFD664AB4F /* Pods_insteadOfLab6_insteadOfLab6UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insteadOfLab6_insteadOfLab6UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5525491D2804527A00A622C9 /* CoreLocationUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocationUI.framework; path = System/Library/Frameworks/CoreLocationUI.framework; sourceTree = SDKROOT; };
@@ -132,6 +136,8 @@
 				55ADAD9527D97BE0001A8A7D /* LaunchScreen.storyboard */,
 				55ADAD9827D97BE0001A8A7D /* Info.plist */,
 				5549B46527FFD292000E16AB /* ServicesViewController.swift */,
+				1961A34E28078FC8006BA93B /* LoginViewController.swift */,
+				1961A35028078FFF006BA93B /* FeedViewController.swift */,
 			);
 			path = insteadOfLab6;
 			sourceTree = "<group>";
@@ -175,7 +181,6 @@
 				9D9BF58F00C70456B5621CF7 /* Pods-insteadOfLab6Tests.debug.xcconfig */,
 				8221338E4812BEE920EBEE30 /* Pods-insteadOfLab6Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -421,6 +426,8 @@
 				55ADAD8F27D97BDE001A8A7D /* ViewController.swift in Sources */,
 				55ADAD8B27D97BDE001A8A7D /* AppDelegate.swift in Sources */,
 				5549B46627FFD292000E16AB /* ServicesViewController.swift in Sources */,
+				1961A34F28078FC8006BA93B /* LoginViewController.swift in Sources */,
+				1961A35128078FFF006BA93B /* FeedViewController.swift in Sources */,
 				55ADAD8D27D97BDE001A8A7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,7 +609,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QWSC32PDSA;
+				DEVELOPMENT_TEAM = 95QCC8YNDL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
@@ -637,7 +644,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QWSC32PDSA;
+				DEVELOPMENT_TEAM = 95QCC8YNDL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
