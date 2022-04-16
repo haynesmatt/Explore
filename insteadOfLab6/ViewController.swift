@@ -14,7 +14,6 @@ import CoreLocationUI
 class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    
     let defaultAnnotation = MKPointAnnotation()
 
     let annotation2 = MKPointAnnotation()
@@ -75,6 +74,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             self.title = "Parking Lots"
             createParkingPoints()
         }
+        if (index == 3){
+            self.title = "Student Housing"
+            createHousingPoints()
+        }
+        if (index == 4){
+            self.title = "Bike Racks"
+            createBikeRackPoints()
+        }
         if (index == 5 ){
             self.title = "Parking Lots"
             ceateDiningPoints()
@@ -103,10 +110,267 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         }
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // do not alter user location marker
+        guard !annotation.isKind(of: MKUserLocation.self) else { return nil }
+
+        // get existing marker
+        var view = mapView.dequeueReusableAnnotationView(withIdentifier: "reuseIdentifier") as? MKMarkerAnnotationView
+
+        // is this a new marker (i.e. nil)?
+        if view == nil {
+            view = MKMarkerAnnotationView(annotation: nil, reuseIdentifier: "reuseIdentifier")
+        }
+        // set subtitle to show without being selected
+        view?.subtitleVisibility = .visible
+
+        // just for fun, show green markers where subtitles exist; red otherwise
+        
+            view?.markerTintColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 0.9)
+        
+        return view
+    }
+    
+    
+    func createHousingPoints() {
+        
+        let locations = [
+            ["title": "Flickinger Court 1 - Commons",  "latitude": 43.00521836974938, "longitude": -78.80085319707071],
+            ["title": "Flickinger Court 2",  "latitude": 43.00476571956016, "longitude": -78.80172618632668],
+            ["title": "Flickinger Court 3",  "latitude": 43.00538028518405, "longitude": -78.80125230329205],
+            ["title": "Flickinger Court 4",  "latitude": 43.00531678120194, "longitude": -78.80174354872131],
+            ["title": "Flickinger Court 6",  "latitude": 43.00587027632461, "longitude": -78.80172977676847],
+            ["title": "Flickinger Court 8",  "latitude": 43.00620600650298, "longitude": -78.80136273284974],
+            ["title": "Flickinger Court 10",  "latitude": 43.00633409327107, "longitude": -78.80077550498716],
+            ["title": "Flickinger Court 12",  "latitude": 43.0061835208444, "longitude": -78.80022667182251],
+            ["title": "Flickinger Court 14",  "latitude": 43.00578992544747, "longitude": -78.8000612674861],
+            ["title": "Flickinger Court 16",  "latitude": 43.00561976681727, "longitude": -78.79980945216153],
+            ["title": "Flickinger Court 18",  "latitude": 43.00542689115301, "longitude": -78.7992285092122],
+            ["title": "Flickinger Court 20",  "latitude": 43.00502068485338, "longitude": -78.79946705874529],
+            ["title": "Flickinger Court 22",  "latitude": 43.0050646316544, "longitude": -78.80010284652902],
+            ["title": "Flickinger Court 24",  "latitude": 43.00471232202039, "longitude": -78.80022176422654],
+            
+            ["title": "Flickinger Court 8",  "latitude": 43.00620600650298, "longitude": -78.80136273284974],
+            ["title": "Flickinger Court 8",  "latitude": 43.00620600650298, "longitude": -78.80136273284974],
+            ["title": "Flickinger Court 8",  "latitude": 43.00620600650298, "longitude": -78.80136273284974],
+
+            ["title": "Hadley Village 90 - Commons",  "latitude": 43.00521836974938, "longitude": -78.80085319707071],
+            ["title": "Hadley Village 101",  "latitude": 42.99873854262977, "longitude": -78.79531643663263],
+            ["title": "Hadley Village 102",  "latitude": 42.99845901037686, "longitude": -78.79527488896996],
+            ["title": "Hadley Village 103",  "latitude": 42.99816234478807, "longitude": -78.795024052218],
+            ["title": "Hadley Village 104",  "latitude": 42.99786082640693, "longitude": -78.79481097653664],
+            ["title": "Hadley Village 105",  "latitude": 42.99784067413462, "longitude": -78.79525468491757],
+            ["title": "Hadley Village 106",  "latitude": 42.99812082581875, "longitude": -78.7955146069804],
+            ["title": "Hadley Village 107",  "latitude": 42.99842333055094, "longitude": -78.79572130061335],
+            ["title": "Hadley Village 108",  "latitude": 42.99873707226002, "longitude": -78.79577055550443],
+            ["title": "Hadley Village 109",  "latitude": 42.99918494485746, "longitude": -78.79576916755745],
+            ["title": "Hadley Village 110",  "latitude": 42.99946030759372, "longitude": -78.79570101999495],
+            ["title": "Hadley Village 111",  "latitude": 42.99946177891948, "longitude": -78.79524597729693],
+            ["title": "Hadley Village 112",  "latitude": 42.9993259183593, "longitude": -78.79481030798402],
+            ["title": "Hadley Village 113",  "latitude": 42.99918675006794, "longitude": -78.79531456128186],
+
+            ["title": "Dewey Hall",  "latitude": 43.0026100191545, "longitude": -78.79488330337522],
+            ["title": "Roosevelt Hall",  "latitude": 43.00260265019647, "longitude": -78.79448958067525],
+            ["title": "Clinton Hall",  "latitude": 43.00174790590636, "longitude": -78.79487993283561],
+            ["title": "Lehman Hall",  "latitude": 43.00176964274157, "longitude": -78.79448998597044],
+
+            ["title": "Creekside Village 812 - Commons",  "latitude": 43.01106990074415, "longitude": -78.79074903989111],
+            ["title": "Creekside Village 801",  "latitude": 43.01089755459849, "longitude": -78.78964587595914],
+            ["title": "Creekside Village 803",  "latitude": 43.01049806667865, "longitude": -78.78940422824458],
+            ["title": "Creekside Village 805",  "latitude": 43.01042268915312, "longitude": -78.79000561655563],
+            ["title": "Creekside Village 807",  "latitude": 43.01043373971012, "longitude": -78.79062465854662],
+            ["title": "Creekside Village 809",  "latitude": 43.01015098856744, "longitude": -78.79108315852591],
+            ["title": "Creekside Village 811",  "latitude": 43.01047542675084, "longitude": -78.79154313274873],
+            ["title": "Creekside Village 813",  "latitude": 43.01157718541734, "longitude": -78.79191214025705],
+            ["title": "Creekside Village 815",  "latitude": 43.01183957676017, "longitude": -78.79236299554755],
+            ["title": "Creekside Village 817",  "latitude": 43.01156365333409, "longitude": -78.79322482652211],
+            ["title": "Creekside Village 819",  "latitude": 43.01198081723288, "longitude": -78.79321835455399],
+            ["title": "Creekside Village 821",  "latitude": 43.01210005152495, "longitude": -78.79268673231771],
+            ["title": "Creekside Village 823",  "latitude": 43.01072718124556, "longitude": -78.7932993750407],
+            ["title": "Creekside Village 825",  "latitude": 43.01118982177454, "longitude": -78.79344360957067],
+
+            ["title": "Flint Village 300 - Commons",  "latitude": 42.99764873597498, "longitude": -78.78723685526097],
+            ["title": "Flint Village 301",  "latitude": 42.99744953312842, "longitude": -78.7861587314811],
+            ["title": "Flint Village 302",  "latitude": 42.99731997376152, "longitude": -78.78721764433897],
+            ["title": "Flint Village 303",  "latitude": 42.9970219856724, "longitude": -78.78809116229859],
+            ["title": "Flint Village 304",  "latitude": 42.99659527591015, "longitude": -78.78884137896456],
+            ["title": "Flint Village 305",  "latitude": 42.99638852138416, "longitude": -78.78990033274181],
+            ["title": "Flint Village 306",  "latitude": 42.99715417809208, "longitude": -78.7888725190308],
+            ["title": "Flint Village 307",  "latitude": 42.99747791839462, "longitude": -78.78845728876794],
+            ["title": "Flint Village 308",  "latitude": 42.99740854887985, "longitude": -78.79049452651981],
+            ["title": "Flint Village 309",  "latitude": 42.99739248565093, "longitude": -78.79152285235753],
+            
+            ["title": "Spaulding Quadrangle",  "latitude": 43.00948557407369, "longitude": -78.78448464138238],
+            ["title": "Richmond Quadrangle",  "latitude": 43.00939117561037, "longitude": -78.78547723281221],
+            ["title": "Red Jacket Quadrangle",  "latitude": 43.00886928675621, "longitude": -78.78628489264533],
+            ["title": "Wilkeson Quadrangle",  "latitude": 43.00844423144911, "longitude": -78.78363910537675],
+            ["title": "Evans Quadrangle",  "latitude": 43.00766467291333, "longitude": -78.78642649403611],
+            ["title": "Fargo Quadrangle",  "latitude": 43.00760708365682, "longitude": -78.78565703876664],
+            ["title": "Greiner Hall",  "latitude": 43.00640488568724, "longitude": -78.7854836087534],
+
+            ["title": "South Lake Village 211 - Commons",  "latitude": 43.00306261560579, "longitude": -78.77892272092522],
+            ["title": "South Lake Village 201",  "latitude": 43.00248088893211, "longitude": -78.77848799061096],
+            ["title": "South Lake Village 202",  "latitude": 43.00189716091946, "longitude": -78.77728765193997],
+            ["title": "South Lake Village 203",  "latitude": 43.00233383388083, "longitude": -78.77780138298468],
+            ["title": "South Lake Village 204",  "latitude": 43.00196982769939, "longitude": -78.77671866847427],
+            ["title": "South Lake Village 205",  "latitude": 43.0026387903529, "longitude": -78.77751147700251],
+            ["title": "South Lake Village 206",  "latitude": 43.00214146090466, "longitude": -78.77619577851885],
+            ["title": "South Lake Village 207",  "latitude": 43.00296327117162, "longitude": -78.77806707450384],
+            ["title": "South Lake Village 208",  "latitude": 43.0027766780547, "longitude": -78.77452539142074],
+            ["title": "South Lake Village 209",  "latitude": 43.00338060116224, "longitude": -78.77870686784618],
+            ["title": "South Lake Village 210",  "latitude": 43.00259611554424, "longitude": -78.77509750942656],
+            ["title": "South Lake Village 211",  "latitude": 43.00214146090466, "longitude": -78.77619577851885],
+            ["title": "South Lake Village 212",  "latitude": 43.00253306028835, "longitude": -78.77570531805729],
+            ["title": "South Lake Village 213",  "latitude": 43.00277968392563, "longitude": -78.77948737145667],
+            ["title": "South Lake Village 214",  "latitude": 43.00258588084868, "longitude": -78.77631984568231],
+            ["title": "South Lake Village 216",  "latitude": 43.00278137375366, "longitude": -78.77687960318573],
+            ["title": "South Lake Village 218",  "latitude": 43.00306629760113, "longitude": -78.77734289021723],
+            ["title": "South Lake Village 220",  "latitude": 43.00341454048918, "longitude": -78.77775839019228],
+            ]
+            for location in locations {
+                let annotation = MKPointAnnotation()
+                annotation.title = location["title"] as? String
+                annotation.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! Double, longitude: location["longitude"] as! Double)
+                mapView.addAnnotation(annotation)
+            }
+    }
+    
+    
+    
+    func createBikeRackPoints () {
+        let locations = [
+            ["title": "Flint Right A",                           "latitude": 42.997519, "longitude": -78.787838],
+            ["title": "Flint Right B",                           "latitude": 42.997484, "longitude": -78.787222],
+            ["title": "Flint Right C",                           "latitude": 42.997616, "longitude": -78.786243],
+            ["title": "Governor's A",                           "latitude": 43.002119, "longitude": -78.794910    ],
+            ["title": "Governor's B",                           "latitude": 43.002616, "longitude": -78.794911    ],
+            ["title": "Governor's C",                           "latitude": 42.997519, "longitude": -78.794682],
+            ["title": "Governor's D",                           "latitude": 42.997519, "longitude": -78.794682],
+            ["title": "Flint Loop A",                           "latitude": 43.000169, "longitude": -78.788812],
+            ["title": "Baldy (Promenade)",                           "latitude": 43.000521, "longitude": -78.787071],
+            
+            ["title": "Hadley A",                           "latitude": 42.998898, "longitude": -78.796032],
+            ["title": "Hadley B",                           "latitude": 42.997986, "longitude": -78.794535],
+            ["title": "Hadley C",                           "latitude": 42.998895, "longitude": -78.794974],
+            ["title": "Hadley D",                           "latitude": 42.999626, "longitude": -78.794593],
+            
+            ["title": "Hadley E",                           "latitude": 43.000521, "longitude": -78.790611],
+            
+            ["title": "Ellicott A",                           "latitude": 43.008850, "longitude": -78.786855],
+            ["title": "Ellicott B",                           "latitude": 43.007775, "longitude": -78.786505],
+            ["title": "Ellicott C",                           "latitude": 43.009507, "longitude": -78.785852],
+            ["title": "Ellicott D",                           "latitude": 43.009836, "longitude": -78.785477],
+            ["title": "Ellicott E",                           "latitude": 43.009739, "longitude": -78.784167],
+            ["title": "Ellicott F",                           "latitude": 43.008777, "longitude": -78.783494],
+            ["title": "Ellicott G",                           "latitude": 43.007448, "longitude": -78.786048],
+            ["title": "Ellicott H",                           "latitude": 43.007176, "longitude": -78.785265],
+            ["title": "Ellicott I",                           "latitude": 43.007074, "longitude": -78.785149],
+            ["title": "Ellicott J",                           "latitude": 43.005902, "longitude": -78.785690],
+            ["title": "Ellicott K",                           "latitude": 43.005902, "longitude": -78.785754],
+            ["title": "Ellicott L",                           "latitude": 43.005872, "longitude": -78.785732],
+            
+            ["title": "Computing Center",                           "latitude": 43.001264, "longitude": -78.791127],
+            
+            ["title": "Cooke A",                           "latitude": 42.999657, "longitude": -78.791377],
+            ["title": "Cooke B",                           "latitude": 42.999658, "longitude": -78.791481],
+            
+            ["title": "Hochstetter A",                           "latitude": 42.999661, "longitude": -78.790808],
+            ["title": "Hochstetter B",                           "latitude": 42.999660, "longitude": -78.790712],
+
+            
+            ["title": "Capen Lower",                           "latitude": 43.001130, "longitude": -78.789848],
+            ["title": "Capen Upper",                           "latitude": 43.001143, "longitude": -78.789144],
+            
+            ["title": "Norton",                           "latitude": 43.000904, "longitude": -78.788895],
+            ["title": "Knox",                           "latitude": 43.000776, "longitude": -78.787943],
+            ["title": "Park A",                           "latitude": 42.999914, "longitude": -78.787573],
+            ["title": "Baldy A",                           "latitude": 43.000521, "longitude": -78.786515],
+            ["title": "Lockwood",                           "latitude": 43.000405, "longitude": -78.785946],
+            ["title": "Clemens",                           "latitude": 43.000308, "longitude": -78.785203],
+            ["title": "Baird",                           "latitude": 42.999719, "longitude": -78.784068],
+            ["title": "Alumni A",                           "latitude": 43.000492, "longitude": -78.780302],
+
+            ["title": "South Lake A",                           "latitude": 43.002292, "longitude": -78.777137],
+            ["title": "South Lake B",                           "latitude": 43.002332, "longitude": -78.776862],
+            ["title": "South Lake C",                           "latitude": 43.002437, "longitude": -78.777103],
+            
+            ["title": "Student Union A",                           "latitude": 43.001575, "longitude": -78.785883],
+            ["title": "Bookstore",                           "latitude": 43.002917, "longitude": -78.784829],
+            ["title": "Davis",                           "latitude": 43.002746, "longitude": -78.786819],
+            ["title": "Ketter A",                           "latitude": 43.002210, "longitude": -78.788538],
+            ["title": "Beane Center",                           "latitude": 42.994092, "longitude": -78.795964],
+
+            ["title": "Flint Village",                           "latitude": 42.997284, "longitude": -78.790995],
+            ["title": "Furnas B",                           "latitude": 43.002025, "longitude": -78.787313],
+            ["title": "Ketter B",                           "latitude": 43.002442, "longitude": -78.787919],
+            ["title": "Baldy B",                           "latitude": 43.000248, "longitude": -78.787284],
+
+            ["title": "Alumni B",                           "latitude": 43.000252, "longitude": -78.782231],
+            ["title": "Alumni C",                           "latitude": 43.000252, "longitude": -78.782324],
+
+            ["title": "Park B",                           "latitude": 43.000033, "longitude": -78.788548],
+            ["title": "Student Union B",                           "latitude": 43.001394, "longitude": -78.785668],
+
+            ["title": "Lockwood",                           "latitude": 43.000253, "longitude": -78.786220],
+            ["title": "Center for the Arts",                "latitude": 43.000510, "longitude": -78.782946],
+            ["title": "Bell A",                           "latitude": 43.001232, "longitude": -78.787160],
+            ["title": "Bell B",                           "latitude": 43.001204, "longitude": -78.787227],
+            ["title": "Cooke C",                           "latitude": 43.000320, "longitude": -78.791488],
+            ["title": "Cooke D",                           "latitude": 43.000320, "longitude": -78.791389],
+            ["title": "Hochstetter C",                           "latitude": 43.000318, "longitude": -78.790819],
+            ["title": "Hochstetter D",                           "latitude": 43.000315, "longitude": -78.790708],
+
+            ["title": "Governor's E",                           "latitude": 43.002124, "longitude": -78.794453],
+            ["title": "Governor's F",                           "latitude": 43.002244, "longitude": -78.794459],
+
+            ["title": "Lee Loop Bus Stop",                           "latitude": 43.001958, "longitude": -78.786010],
+            ["title": "Norton East",                           "latitude": 43.000912, "longitude": -78.788371],
+            ["title": "Governor's G",                           "latitude": 43.002139, "longitude": -78.793554],
+            ["title": "Hadley F",                           "latitude": 42.999021, "longitude": -78.796031],
+            ["title": "Hadley G",                           "latitude": 42.998586, "longitude": -78.796036],
+            
+            ["title": "NSC A",                           "latitude": 43.000486, "longitude": -78.791706],
+            ["title": "Math Building",                           "latitude": 43.001355, "longitude": -78.792616],
+            ["title": "Capen (North)",                           "latitude": 43.001169, "longitude": -78.789849],
+            ["title": "O'Brian (Promenade)",                           "latitude": 43.000578, "longitude": -78.788274],
+            ["title": "Alfiero",                           "latitude": 42.999646, "longitude": -78.786452],
+            ["title": "Crofts's",                           "latitude": 42.994713, "longitude": -78.795181],
+            ["title": "Center for Tomorrow Shuttle",                           "latitude": 42.993800, "longitude": -78.792908],
+
+            ["title": "Flint Loop B",                           "latitude": 43.000015, "longitude": -78.789453],
+            ["title": "Student Union (Promenade) A",                           "latitude": 43.000836, "longitude": -78.786591],
+            ["title": "Student Union (Promenade) B",                           "latitude": 43.000837, "longitude": -78.786467],
+            ["title": "Student Union (Promenade) C",                           "latitude": 43.000838, "longitude": -78.786015],
+            ["title": "Lockwood (Mary Talbert Way)",                           "latitude": 42.999941, "longitude": -78.786280],
+            ["title": "Slee",                           "latitude": 43.000469, "longitude": -78.783722],
+            ["title": "Rensch Loop",                           "latitude": 42.999722, "longitude": -78.793073],
+            ["title": "NSC B",                           "latitude": 43.000486, "longitude": -78.791748],
+            ["title": "Bonner",                           "latitude": 43.001648, "longitude": -78.788467],
+            ["title": "Wilkeson",                           "latitude": 43.008898, "longitude": -78.783380],
+
+            ["title": "Richmond",                           "latitude": 43.009345, "longitude": -78.785852],
+            ["title": "Red Jacket",                           "latitude": 43.009112, "longitude": -78.787042],
+            ["title": "Ellicott M",                           "latitude": 43.009588, "longitude": -78.785995],
+            ["title": "Furnas C",                           "latitude": 43.001955, "longitude": -78.786786],
+            ["title": "Flint",                           "latitude": 42.999869, "longitude": -78.788933],
+            ["title": "Fargo",                           "latitude": 43.007175, "longitude": -78.785438],
+            ["title": "Student Union C",                           "latitude": 43.001394, "longitude": -78.785598],
+
+            ]
+            
+        
+        for location in locations {
+            let annotation = MKPointAnnotation()
+            annotation.title = location["title"] as? String
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! Double, longitude: location["longitude"] as! Double)
+            mapView.addAnnotation(annotation)
+        }
+    }
+    
     func ceateDiningPoints(){
         
         let locations = [
-            ["title": "Teddy's ",                           "latitude": 43.00248, "longitude": -78.794472],
+            ["title": "Teddy's",                           "latitude": 43.00248, "longitude": -78.794472],
             ["title": "The Cellar",                         "latitude": 43.00242,  "longitude": -78.79453],
             ["title": "Governors Dining Center",            "latitude": 43.002366, "longitude": -78.794417],
             ["title": "Capen Café",                         "latitude": 43.001209, "longitude": -78.789798],
@@ -127,10 +391,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             ["title": "Sizzles",                            "latitude": 43.009018, "longitude": -78.785546],
             ["title": "Perks",                              "latitude": 43.009077, "longitude": -78.785167],
             ["title": "Jamba",                              "latitude": 43.001136, "longitude": -78.786533],
-            ["title": "Jamba",                              "latitude": 43.001136, "longitude": -78.786533],
-            ["title": "Jamba",                              "latitude": 43.001136, "longitude": -78.786533]
-
-
             ]
         
         for location in locations {
@@ -207,20 +467,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             ["title": "Center For Tomorrow (CFT)", "subtitle": "Park and Ride Lot", "latitude": 42.993285, "longitude": -78.792808],
             ["title": "Stadium",  "subtitle": "Park and Ride Lot",                  "latitude": 42.997821, "longitude": -78.779655],
             
-            ["title": "Alumni A",   "subtitle": "Arts, Athletics or Events Lot",           "latitude": 43.000716, "longitude": -78.780223],
-            ["title": "Alumni C",  "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 43.001909, "longitude": -78.779976],
-            ["title": "Arena",   "subtitle": "Arts, Athletics or Events Parking Lot",      "latitude": 43.000857, "longitude": -78.779418],
-            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
+            ["title": "Alumni A",   "subtitle": "Arts, Athletics or Events Lot",       "latitude": 43.000716, "longitude": -78.780223],
+            ["title": "Alumni C",  "subtitle": "Arts, Athletics or Events Lot",        "latitude": 43.001909, "longitude": -78.779976],
+            ["title": "Arena",   "subtitle": "Arts, Athletics or Events Lot",          "latitude": 43.000857, "longitude": -78.779418],
+            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Lot",        "latitude": 42.998558, "longitude": -78.784504],
+            ["title": "Baird B",   "subtitle": "Arts, Athletics or Events Lot",        "latitude": 42.998401, "longitude": -78.7871],
+            ["title": "Jacobs A",   "subtitle": "Arts, Athletics or Events Lot",       "latitude": 42.998511, "longitude": -78.788302],
+            ["title": "Jacobs B",   "subtitle": "Arts, Athletics or Events Lot",       "latitude": 42.998401, "longitude": -78.7871],
+            ["title": "Jacobs C",   "subtitle": "Arts, Athletics or Events Lot",       "latitude": 42.998574, "longitude": -78.786113],
+            ["title": "Lake La Salle",   "subtitle": "Arts, Athletics or Events Lot",  "latitude": 43.001328, "longitude": -78.781049],
+            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Lot",        "latitude": 42.998558, "longitude": -78.784504],
+            ["title": "Slee A",   "subtitle": "Arts, Athletics or Events Lot",         "latitude": 42.99848, "longitude": -78.783517],
+            ["title": "Slee B",   "subtitle": "Arts, Athletics or Events Lot",         "latitude": 42.999374, "longitude": -78.783474],
+            ["title": "Special Events",   "subtitle": "Arts, Athletics or Events Lot", "latitude": 42.997648, "longitude": -78.784418],
             
-            ["title": "Baird B",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998401, "longitude": -78.7871],
-            ["title": "Jacobs A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998511, "longitude": -78.788302],
-            ["title": "Jacobs B",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998401, "longitude": -78.7871],
-            ["title": "Jacobs C",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998574, "longitude": -78.786113]
-//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
-//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
-//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504],
-//            ["title": "Baird A",   "subtitle": "Arts, Athletics or Events Parking Lot",    "latitude": 42.998558, "longitude": -78.784504]
+            
+            
+            ["title": "Furnas",   "subtitle": "Faculty/Staff Lot",         "latitude": 43.00245, "longitude": -78.786328],
+            ["title": "Governors A",   "subtitle": "Faculty/Staff Lot",    "latitude": 43.00234, "longitude": -78.790877],
+            ["title": "Hochstetter A",   "subtitle": "Faculty/Staff Lot",  "latitude": 42.998809, "longitude": -78.791585],
+            ["title": "Jacobs A",   "subtitle": "Faculty/Staff Lot",       "latitude": 42.998511, "longitude": -78.788302],
 
+            
+            ["title": "Cooke A",   "subtitle": "Parking by Permit",        "latitude": 42.999437, "longitude": -78.793216],
+            ["title": "Cooke B",   "subtitle": "Parking by Permit",        "latitude": 42.998715, "longitude": -78.793237],
+            ["title": "Crofts",   "subtitle": "Parking by Permit",         "latitude": 42.994807, "longitude": -78.797078],
+            ["title": "Fronczak",   "subtitle": "Parking by Permit",       "latitude": 43.002425, "longitude": -78.791424],
+            ["title": "Hochstetter B",   "subtitle": "Parking by Permit",  "latitude": 42.99859, "longitude": -78.790212],
+            ["title": "Jarvis A",   "subtitle": "Parking by Permit",       "latitude": 43.003721, "longitude": -78.788517],
+            ["title": "Jarvis B",   "subtitle": "Parking by Permit",       "latitude": 43.003972, "longitude": -78.786929],
+            ["title": "Ketter",   "subtitle": "Parking by Permit",         "latitude": 43.002466, "longitude": -78.788838],
+            ["title": "Park Hall",   "subtitle": "Parking by Permit",      "latitude": 42.999657, "longitude": -78.788688],
+
+            
             ]
         
         for location in locations {
@@ -231,4 +510,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             mapView.addAnnotation(annotation)
         }
     }
+    
 }
+

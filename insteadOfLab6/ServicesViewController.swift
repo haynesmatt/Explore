@@ -20,7 +20,7 @@ class ServicesViewController: UIViewController {
     }
     
 
-    @IBAction func printerButtonPressed(_ sender: Any) {
+    @IBAction func buildingsButtonPressed(_ sender: Any) {
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "MapVC") as! ViewController
         controller.index = 1
@@ -28,6 +28,8 @@ class ServicesViewController: UIViewController {
         self.show(controller, sender: (Any).self)
     }
        
+ 
+    
     @IBAction func parkingButtonPressed(_ sender: Any) {
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "MapVC") as! ViewController
@@ -36,8 +38,24 @@ class ServicesViewController: UIViewController {
         self.show(controller, sender: (Any).self)
     }
     
+    @IBAction func housingButtonPressed(_ sender: Any) {
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MapVC") as! ViewController
+        controller.index = 3
+        
+        self.show(controller, sender: (Any).self)
+    }
     
-    @IBAction func DiningButtonPressed(_ sender: Any) {
+    @IBAction func bikeButtonPressed(_ sender: Any){
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MapVC") as! ViewController
+        controller.index = 4
+        
+        self.show(controller, sender: (Any).self)
+    }
+    
+    
+    
+    @IBAction func diningButtonPressed(_ sender: Any) {
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "MapVC") as! ViewController
         controller.index = 5
