@@ -137,4 +137,4 @@ Wepa API
 ## Sprint Progress
 Sprint #2 - Video Walkthrough:
 
-<img src='http://g.recordit.co/CjktQ2ep8x.gif' title='Sprint 2' alt='Sprint 2 Video Walkthrough' width=250><br>
+<img src='http://g.recordit.co/mteo2wcelZ.gif' title='Sprint 2' alt='Sprint 2 Video Walkthrough' width=250><br>
