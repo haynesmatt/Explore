@@ -33,7 +33,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         button.icon = .arrowOutline
         button.cornerRadius = 12
         button.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 0.9)
-        button.center = CGPoint(x: 360, y: 50)
+        button.center = CGPoint(x: 345, y: 50)
         mapView.addSubview(button)
         
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
