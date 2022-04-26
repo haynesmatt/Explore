@@ -14,6 +14,7 @@ import CoreLocationUI
 class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+
     let defaultAnnotation = MKPointAnnotation()
 
     let annotation2 = MKPointAnnotation()
@@ -28,12 +29,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
 
     private func createButton() {
         
-        let button = CLLocationButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        
+        let button = CLLocationButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
         button.icon = .arrowOutline
         button.cornerRadius = 12
         button.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 0.9)
-        button.center = CGPoint(x: 345, y: 50)
+        button.center = CGPoint(x: 348, y: 80)
+        
         mapView.addSubview(button)
         
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
@@ -55,7 +56,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
         defaultAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.001784, longitude: -78.789556)
 
         let region = MKCoordinateRegion(center:defaultAnnotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
@@ -427,7 +427,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             ["title": "UB Commons",                         "latitude": 43.00162383193572, "longitude": -78.78488395695156],
             ["title": "Clemens Hall",                       "latitude": 43.00025853666757, "longitude": -78.78499950448409],
             ["title": "Baird Hall",                         "latitude": 43.00004420474259, "longitude": -78.78448597964672],
-
+            ["title": "Lockwood Memorial Library",                         "latitude": 43.00025286178912, "longitude": -78.78602757819535],
+            ["title": "Student Union",                         "latitude": 43.00116440108123, "longitude": -78.78614704127043],
+            ["title": "Center for the Arts",                         "latitude": 43.00094654481062, "longitude": -78.78287575151788],
+            ["title": "Morris Sports Performance Center",                         "latitude": 42.99979165944014, "longitude": -78.77900287503519],
+            ["title": "UB Stadium",                         "latitude": 42.99896794670038, "longitude": -78.77749998430836],
+            ["title": "Murchie Family Fieldhouse",                         "latitude": 43.000445, "longitude": -78.777548],
+            ["title": "Bissell Hall",                         "latitude": 42.99852701596522, "longitude": -78.78071863279813],
+            ["title": "Slee Hall",                         "latitude": 43.00042328004822, "longitude": -78.78398765182203],
+            ["title": "NC Childcare Center",                         "latitude": 43.00232107052543, "longitude": -78.7798510839301],
+            ["title": "Capen Hall",                         "latitude": 43.00087988480986, "longitude": -78.78956773229439],
+            ["title": "Talbert Hall",                         "latitude": 43.00068631540694, "longitude": -78.7903774787054],
         ]
         
         for location in locations {
