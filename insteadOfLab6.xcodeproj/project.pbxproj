@@ -10,6 +10,7 @@
 		1961A34F28078FC8006BA93B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961A34E28078FC8006BA93B /* LoginViewController.swift */; };
 		1961A35128078FFF006BA93B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961A35028078FFF006BA93B /* FeedViewController.swift */; };
 		19B04DAD281A00030087D031 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B04DAC281A00030087D031 /* SignUpViewController.swift */; };
+		19B04DAF281FAD7C0087D031 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B04DAE281FAD7C0087D031 /* CameraViewController.swift */; };
 		19B0797FE7C4B96FE751B74E /* Pods_insteadOfLab6_insteadOfLab6UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30690C889F44D1CFD664AB4F /* Pods_insteadOfLab6_insteadOfLab6UITests.framework */; };
 		1F37B76B17C1180A4C2289F0 /* Pods_insteadOfLab6Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0223FC801F3D91CB179E10E5 /* Pods_insteadOfLab6Tests.framework */; };
 		5525491E2804527A00A622C9 /* CoreLocationUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5525491D2804527A00A622C9 /* CoreLocationUI.framework */; };
@@ -52,6 +53,7 @@
 		1961A34E28078FC8006BA93B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1961A35028078FFF006BA93B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		19B04DAC281A00030087D031 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		19B04DAE281FAD7C0087D031 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		300926084E771F00B0E4D799 /* Pods_insteadOfLab6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insteadOfLab6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30690C889F44D1CFD664AB4F /* Pods_insteadOfLab6_insteadOfLab6UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insteadOfLab6_insteadOfLab6UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5525491D2804527A00A622C9 /* CoreLocationUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocationUI.framework; path = System/Library/Frameworks/CoreLocationUI.framework; sourceTree = SDKROOT; };
@@ -150,6 +152,7 @@
 				91489007280A637F007E7E6F /* LikedGridViewController.swift */,
 				91489009280A7F80007E7E6F /* PostViewController.swift */,
 				19B04DAC281A00030087D031 /* SignUpViewController.swift */,
+				19B04DAE281FAD7C0087D031 /* CameraViewController.swift */,
 			);
 			path = insteadOfLab6;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B04DAF281FAD7C0087D031 /* CameraViewController.swift in Sources */,
 				9148900A280A7F80007E7E6F /* PostViewController.swift in Sources */,
 				55ADAD8F27D97BDE001A8A7D /* ViewController.swift in Sources */,
 				55ADAD8B27D97BDE001A8A7D /* AppDelegate.swift in Sources */,
@@ -625,7 +629,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QWSC32PDSA;
+				DEVELOPMENT_TEAM = 95QCC8YNDL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
@@ -642,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado.insteadOfLab6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado1.insteadOfLab6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -660,7 +664,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QWSC32PDSA;
+				DEVELOPMENT_TEAM = 95QCC8YNDL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
@@ -677,7 +681,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado.insteadOfLab6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado1.insteadOfLab6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

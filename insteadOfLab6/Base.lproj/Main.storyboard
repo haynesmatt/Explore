@@ -520,6 +520,56 @@
             </objects>
             <point key="canvasLocation" x="822" y="-1191"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="RPl-oN-7AV">
+            <objects>
+                <viewController id="0Sy-c4-9DZ" customClass="CameraViewController" customModule="insteadOfLab6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CVW-cw-Nct">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLo-4H-pdO">
+                                <rect key="frame" x="20" y="33" width="374" height="355"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LYr-RY-rry" appends="YES" id="jD9-Hf-sJv"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulz-IC-lqm">
+                                <rect key="frame" x="20" y="404" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-F5-rFT">
+                                <rect key="frame" x="20" y="476" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="0Sy-c4-9DZ" eventType="touchUpInside" id="8FG-Ly-qrg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="atn-fX-nPp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="CVW-cw-Nct" id="u1W-84-dbu"/>
+                        <outlet property="imageView" destination="TLo-4H-pdO" id="zwR-Mz-4jk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zpj-1n-uxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LYr-RY-rry">
+                    <connections>
+                        <action selector="onCameraButton:" destination="0Sy-c4-9DZ" id="eub-mu-NIU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1950.7246376811595" y="-459.375"/>
+        </scene>
         <!--Liked-->
         <scene sceneID="kNF-DU-mPb">
             <objects>
@@ -564,7 +614,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9t-US-Rkc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="-1191"/>
+            <point key="canvasLocation" x="3219" y="-1191"/>
         </scene>
         <!--FeedViewController-->
         <scene sceneID="t0U-bs-gai">
@@ -621,7 +671,13 @@
                             <constraint firstAttribute="bottom" secondItem="uPY-KZ-kJQ" secondAttribute="bottom" id="jK9-b8-LRl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Feed" id="W0S-5B-Mda"/>
+                    <navigationItem key="navigationItem" title="Feed" id="W0S-5B-Mda">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="x44-pj-8xt">
+                            <connections>
+                                <segue destination="0Sy-c4-9DZ" kind="presentation" id="IVi-mC-Ts0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9H-YH-5Rr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -715,7 +771,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYE-pl-u6Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228.985507246377" y="-459.375"/>
+            <point key="canvasLocation" x="3219" y="-392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Ig-1d-oWM">
@@ -752,6 +808,9 @@
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
