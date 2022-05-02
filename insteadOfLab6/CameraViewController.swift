@@ -7,13 +7,21 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet var commentField: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
     
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var descriptionField: UITextField!
+    @IBOutlet weak var latitudeField: UITextField!
+    @IBOutlet weak var longitudeField: UITextField!
     
 
     override func viewDidLoad() {
@@ -23,8 +31,28 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
+        let post = PFObject(className:"Posts")
+        post["author"] = PFUser.current()!
+        
+        post["title"] = titleField.text!
+        post["description"] = descriptionField.text!
+        post["latitude"] = latitudeField.text!
+        post["longitude"] = longitudeField.text!
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data:imageData!)
+        
+        post["image"] = file
+        
+        post.saveInBackground{ (success,error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            }else{
+                print("error!")
+            }
+        }
     }
-    
     
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -42,7 +70,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
-        let size = CGSize(width: 300, height: 300)
+        let size = CGSize(width: 320, height: 180)
         let scaledImage = image.af_imageScaled(to: size)
         imageView.image = scaledImage
         
