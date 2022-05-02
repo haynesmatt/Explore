@@ -18,8 +18,30 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        usernameField.attributedPlaceholder = NSAttributedString(
+            string: "Username",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+        )
+        
+        passwordField.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+        )
+        
+        addBottomBorder(box: usernameField)
+        addBottomBorder(box: passwordField)
+
         // Do any additional setup after loading the view.
     }
+    
+    func addBottomBorder(box: UITextField){
+            let bottomLine = CALayer()
+            bottomLine.frame = CGRect(x: 0, y: box.frame.size.height - 1, width: box.frame.size.width, height: 1)
+            bottomLine.backgroundColor = UIColor.white.cgColor
+        box.borderStyle = .none
+        box.layer.addSublayer(bottomLine)
+        }
+    
     
     @IBAction func onSignUp(_ sender: Any) {
         let user = PFUser()
