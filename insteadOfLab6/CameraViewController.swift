@@ -8,8 +8,10 @@
 import UIKit
 import AlamofireImage
 import Parse
+import CoreLocation
+import CoreLocationUI
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -23,10 +25,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var latitudeField: UITextField!
     @IBOutlet weak var longitudeField: UITextField!
     
+    let manager = CLLocationManager()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.layer.cornerRadius = 20
+        
+        manager.delegate = self
+
         // Do any additional setup after loading the view.
     }
     
@@ -76,6 +83,23 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         imageView.layer.cornerRadius = 20
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        guard let location = locations.first else {return}
+        print(location.coordinate.latitude)                 // coordinates as stored as DOUBLES
+        print(location.coordinate.longitude)
+        latitudeField.text = String(location.coordinate.latitude)   // updates label with lat
+        longitudeField.text = String(location.coordinate.longitude) // updates label with long
+
+            self.manager.stopUpdatingLocation()
+    }
+    
+    @IBAction func pressedLocale(_ sender: Any) {
+        manager.startUpdatingLocation()
+        print("Location button tapped.")
     }
     
 

@@ -8,8 +8,9 @@
 import UIKit
 import AlamofireImage
 import Parse
+import MapKit
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, CLLocationManagerDelegate  {
     
     @IBOutlet weak var postView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -36,6 +37,29 @@ class PostViewController: UIViewController {
     }
     
     @IBAction func onMap(_ sender: Any) {
+        let title = post["title"] as? String
+        let lat = post["latitude"] as! String
+        let long = post["longitude"] as! String
+        
+        let latCast = Double(lat)
+        let longCast = Double(long)
+
+        
+        
+        let latitude: CLLocationDegrees = latCast!
+        let longitude: CLLocationDegrees = longCast!
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        mapItem.openInMaps(launchOptions: options)
+    
     }
 
     /*
