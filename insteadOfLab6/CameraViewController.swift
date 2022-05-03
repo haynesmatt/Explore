@@ -26,7 +26,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
@@ -73,6 +73,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let size = CGSize(width: 320, height: 180)
         let scaledImage = image.af_imageScaled(to: size)
         imageView.image = scaledImage
+        imageView.layer.cornerRadius = 20
         
         dismiss(animated: true, completion: nil)
     }

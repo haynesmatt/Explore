@@ -21,7 +21,23 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
+        
+//        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.minimumLineSpacing = 4
+//        layout.minimumInteritemSpacing = 4
+//
+//        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
+//        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCell
+        
+            let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
+            let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
+            let size: CGFloat = (cell.frame.size.width - space) / 2.0
+            return CGSize(width: size, height: size)
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -56,6 +72,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let filter = AspectScaledToFillSizeFilter(size: cell.photoView.frame.size)
         
         cell.photoView.af_setImage(withURL: url, filter: filter)
+        cell.photoView.layer.cornerRadius = 20
         
         return cell
     }
