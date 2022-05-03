@@ -40,7 +40,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["longitude"] = longitudeField.text!
         
         let imageData = imageView.image!.pngData()
-        let file = PFFileObject(data:imageData!)
+        let file = PFFileObject(name: "image.png", data:imageData!)
         
         post["image"] = file
         

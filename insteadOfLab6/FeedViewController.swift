@@ -40,7 +40,6 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(posts.count)
         return posts.count
     }
     
@@ -50,29 +49,35 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let post = posts[indexPath.row]
         
         cell.titleLabel.text = post["title"] as! String
-        print("hi")
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
+        let filter = AspectScaledToFillSizeFilter(size: cell.photoView.frame.size)
         
-        cell.photoView.af_setImage(withURL: url)
+        cell.photoView.af_setImage(withURL: url, filter: filter)
         
         return cell
     }
     
-    // "https://picsum.photos/id/237/200/300"
-    // when urlString on line 57 is replaced with above url, the image is displayed
-    // meaning there is a problem with the url of uploaded images?
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        // find post
+        if segue.identifier == "post" {
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let post = posts[indexPath.row]
+        
+        // pass post to postViewController
+        let postViewController = segue.destination as! PostViewController
+        postViewController.post = post
+        }
     }
-    */
-
+    
 }
