@@ -19,12 +19,13 @@ class LoginViewController: UIViewController {
 
         usernameField.attributedPlaceholder = NSAttributedString(
             string: "Username",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray2]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
         )
         
         passwordField.attributedPlaceholder = NSAttributedString(
             string: "Password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray2]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
+            
         )
         
         
@@ -33,8 +34,21 @@ class LoginViewController: UIViewController {
         addBottomBorder(box: passwordField)
         // Do any additional setup after loading the view.
         
+        //Looks for single or multiple taps.
+             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+            //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+            //tap.cancelsTouchesInView = false
+
+            view.addGestureRecognizer(tap)
     }
     
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
     func addBottomBorder(box: UITextField){
             let bottomLine = CALayer()

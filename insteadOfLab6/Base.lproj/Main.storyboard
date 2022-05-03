@@ -338,7 +338,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7on-gY-v9K">
                                 <rect key="frame" x="60" y="398" width="269" height="34"/>
@@ -349,7 +349,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBB-wH-MMe">
                                 <rect key="frame" x="60" y="483" width="269" height="31"/>
@@ -360,9 +360,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In" cornerStyle="dynamic">
                                     <backgroundConfiguration key="background" cornerRadius="50">
-                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onLogIn:" destination="5B0-nx-Ooe" eventType="touchUpInside" id="cpW-7o-281"/>
@@ -375,7 +375,7 @@
                                     <constraint firstAttribute="width" constant="198" id="hJN-gZ-3fZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eS-jk-XXm">
@@ -403,10 +403,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up" cornerStyle="dynamic">
                                     <backgroundConfiguration key="background" cornerRadius="60">
-                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="1mG-ah-Jdi" kind="presentation" identifier="Sign" id="jgv-y5-m5R"/>
@@ -684,8 +684,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Submit" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                    <color key="baseBackgroundColor" red="0.0" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onSubmitButton:" destination="0Sy-c4-9DZ" eventType="touchUpInside" id="8FG-Ly-qrg"/>
@@ -697,8 +697,8 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <clLocationButton opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" icon="arrowOutline" label="currentLocation" cornerRadius="20" translatesAutoresizingMaskIntoConstraints="NO" id="qzW-GO-giz">
-                                <rect key="frame" x="208" y="562" width="185" height="41"/>
+                            <clLocationButton opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" icon="arrowOutline" cornerRadius="20" translatesAutoresizingMaskIntoConstraints="NO" id="qzW-GO-giz">
+                                <rect key="frame" x="352" y="562" width="41" height="41"/>
                                 <color key="backgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -756,6 +756,7 @@
                         <outlet property="imageView" destination="TLo-4H-pdO" id="zwR-Mz-4jk"/>
                         <outlet property="latitudeField" destination="l4e-TD-0g4" id="MdW-n7-u0Q"/>
                         <outlet property="latitudeLabel" destination="kIz-Iz-tWE" id="I9y-3X-NfH"/>
+                        <outlet property="localeButton" destination="qzW-GO-giz" id="ogQ-LU-vwH"/>
                         <outlet property="longitudeField" destination="wjL-bs-Wd0" id="Hz9-vs-Od2"/>
                         <outlet property="longitudeLabel" destination="M0p-NJ-HeH" id="7ND-Nx-hu5"/>
                         <outlet property="titleField" destination="ulz-IC-lqm" id="DIh-Q7-9v8"/>
@@ -999,7 +1000,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="19v-LE-c7Z"/>
+        <segue reference="pgs-8A-ZnU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bicycle.circle.fill" catalog="system" width="128" height="121"/>
@@ -1020,9 +1021,6 @@
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

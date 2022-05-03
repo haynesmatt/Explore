@@ -15,6 +15,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var localeButton: CLLocationButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -31,10 +32,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.layer.cornerRadius = 20
-        
+        localeButton.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 1)
         manager.delegate = self
-
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
@@ -86,7 +86,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
-
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         guard let location = locations.first else {return}
         print(location.coordinate.latitude)                 // coordinates as stored as DOUBLES
@@ -103,6 +102,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
 
+    
     /*
     // MARK: - Navigation
 

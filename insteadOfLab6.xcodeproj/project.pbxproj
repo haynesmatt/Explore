@@ -633,7 +633,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L6FC59B756;
+				DEVELOPMENT_TEAM = QWSC32PDSA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
@@ -650,7 +650,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado2.insteadOfLab6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado.insteadOfLab6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -668,7 +668,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L6FC59B756;
+				DEVELOPMENT_TEAM = QWSC32PDSA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
@@ -685,7 +685,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado2.insteadOfLab6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reyesenamorado.insteadOfLab6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
