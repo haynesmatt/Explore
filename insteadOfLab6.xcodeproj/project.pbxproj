@@ -25,6 +25,7 @@
 		55ADADAC27D97BE0001A8A7D /* insteadOfLab6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADADAB27D97BE0001A8A7D /* insteadOfLab6UITests.swift */; };
 		55ADADAE27D97BE0001A8A7D /* insteadOfLab6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADADAD27D97BE0001A8A7D /* insteadOfLab6UITestsLaunchTests.swift */; };
 		55ADADBC27D97C51001A8A7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55ADADBB27D97C51001A8A7D /* MapKit.framework */; };
+		9143CCF1282094FE008D8990 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143CCF0282094FE008D8990 /* PostCell.swift */; };
 		91489004280A6230007E7E6F /* LikedGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91489003280A6230007E7E6F /* LikedGridCell.swift */; };
 		91489008280A637F007E7E6F /* LikedGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91489007280A637F007E7E6F /* LikedGridViewController.swift */; };
 		9148900A280A7F80007E7E6F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91489009280A7F80007E7E6F /* PostViewController.swift */; };
@@ -75,6 +76,7 @@
 		5CB655C7A0EBF56AF4A2072A /* Pods-insteadOfLab6-insteadOfLab6UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6-insteadOfLab6UITests.release.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6-insteadOfLab6UITests/Pods-insteadOfLab6-insteadOfLab6UITests.release.xcconfig"; sourceTree = "<group>"; };
 		8221338E4812BEE920EBEE30 /* Pods-insteadOfLab6Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6Tests.release.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6Tests/Pods-insteadOfLab6Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8FA52EB90ABD1F45CACE1BCE /* Pods-insteadOfLab6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6.release.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6/Pods-insteadOfLab6.release.xcconfig"; sourceTree = "<group>"; };
+		9143CCF0282094FE008D8990 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		91489003280A6230007E7E6F /* LikedGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedGridCell.swift; sourceTree = "<group>"; };
 		91489007280A637F007E7E6F /* LikedGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedGridViewController.swift; sourceTree = "<group>"; };
 		91489009280A7F80007E7E6F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				91489009280A7F80007E7E6F /* PostViewController.swift */,
 				19B04DAC281A00030087D031 /* SignUpViewController.swift */,
 				19B04DAE281FAD7C0087D031 /* CameraViewController.swift */,
+				9143CCF0282094FE008D8990 /* PostCell.swift */,
 			);
 			path = insteadOfLab6;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				1961A35128078FFF006BA93B /* FeedViewController.swift in Sources */,
 				91489008280A637F007E7E6F /* LikedGridViewController.swift in Sources */,
 				55ADAD8D27D97BDE001A8A7D /* SceneDelegate.swift in Sources */,
+				9143CCF1282094FE008D8990 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
