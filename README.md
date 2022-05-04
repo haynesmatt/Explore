@@ -138,3 +138,7 @@ Wepa API
 Sprint #2 - Video Walkthrough:
 
 <img src='http://g.recordit.co/mteo2wcelZ.gif' title='Sprint 2' alt='Sprint 2 Video Walkthrough' width=250><br>
+
+Sprint #3 & 4 - Video Walkthrough:
+
+<img src='http://g.recordit.co/bZ0BaigpXB.gif' title='Sprint 3 & 4' alt='Sprint 3 & 4 Video Walkthrough' width=250><br>
