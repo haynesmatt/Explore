@@ -63,6 +63,12 @@ class ServicesViewController: UIViewController {
         self.show(controller, sender: (Any).self)
     }
     
+    @IBAction func printersButtonPressed(_ sender: Any){
+    let controller = storyboard?.instantiateViewController(withIdentifier: "MapVC") as! ViewController
+    controller.index = 6
+    
+    self.show(controller, sender: (Any).self)
+}
     
     
     

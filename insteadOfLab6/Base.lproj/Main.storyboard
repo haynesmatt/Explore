@@ -128,6 +128,9 @@
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                     <color key="baseBackgroundColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="printersButtonPressed:" destination="ZiY-SK-6oD" eventType="touchUpInside" id="fSG-tc-fd0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gkf-Sv-DsB"/>
