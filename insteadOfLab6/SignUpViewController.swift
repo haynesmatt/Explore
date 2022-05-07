@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         usernameField.attributedPlaceholder = NSAttributedString(
             string: "Username",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
