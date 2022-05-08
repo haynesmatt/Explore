@@ -9,6 +9,13 @@ import UIKit
 
 class LikedGridCell: UICollectionViewCell {
     
+    @IBOutlet weak var photoView: UIImageView!
+    @IBAction func onMap(_ sender: Any) {
+    }
+    @IBAction func onSaved(_ sender: Any) {
+    }
+    
+    
     var cornerRadius: CGFloat = 5.0
 
         override func awakeFromNib() {

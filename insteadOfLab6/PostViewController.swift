@@ -15,6 +15,7 @@ class PostViewController: UIViewController, CLLocationManagerDelegate  {
     @IBOutlet weak var postView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     var post: PFObject!
     
@@ -31,10 +32,84 @@ class PostViewController: UIViewController, CLLocationManagerDelegate  {
         
         let filter = AspectScaledToFillSizeFilter(size: postView.frame.size)
         postView.af_setImage(withURL: url, filter: filter)
+        
+        setSaved()
     }
     
     @IBAction func onSave(_ sender: Any) {
+        guard let user = PFUser.current() else { return }
+        let relation = user.relation(forKey: "likes")
+        let query = relation.query()
+        
+        query.whereKey("objectId", equalTo: post.objectId)
+        
+        if let object = try? query.getFirstObject() {
+            saveButton.setTitle("Save", for: UIControl.State.normal)
+            saveButton.backgroundColor = UIColor.systemGray4
+            saveButton.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            
+            relation.remove(post)
+            user.saveInBackground { (succeeded, error) in
+                if (succeeded) {
+                    print("This post has been added to the user's likes relation.")
+                } else {
+                    print("Error: \(error?.localizedDescription)")
+                }
+        }
+            
+            
+        } else {
+            saveButton.backgroundColor = UIColor.gray
+            saveButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            saveButton.layer.cornerRadius = 30
+            saveButton.setTitle("Saved", for: UIControl.State.normal)
+            saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            // saveButton.font = UIFont.boldSystemFont(ofSize: 16.0)
+            
+            relation.add(post)
+            user.saveInBackground { (succeeded, error) in
+                if (succeeded) {
+                    print("This post has been removed from the user's likes relation.")
+                } else {
+                    print("Error: \(error?.localizedDescription)")
+                }
+        }
+        
+        relation.add(post)
+        relation.remove(post)
+        user.saveInBackground { (succeeded, error) in
+            if (succeeded) {
+                print("This post has been added to the user's likes relation.")
+            } else {
+                print("Error: \(error?.localizedDescription)")
+            }
+        }
+        
+        
+        
     }
+    }
+    
+    func setSaved() {
+        guard let user = PFUser.current() else { return }
+        let relation = user.relation(forKey: "likes")
+        let query = relation.query()
+        
+        query.whereKey("objectId", equalTo: post.objectId)
+        
+        if let object = try? query.getFirstObject() {
+            saveButton.backgroundColor = UIColor.gray
+            saveButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            saveButton.layer.cornerRadius = 30
+            saveButton.setTitle("Saved", for: UIControl.State.normal)
+            saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            // saveButton.font = UIFont.boldSystemFont(ofSize: 16.0)
+        } else {
+            saveButton.setTitle("Save", for: UIControl.State.normal)
+        }
+    }
+    
+    
     
     @IBAction func onMap(_ sender: Any) {
         let title = post["title"] as? String

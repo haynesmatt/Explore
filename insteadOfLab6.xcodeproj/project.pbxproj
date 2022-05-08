@@ -27,8 +27,8 @@
 		55ADADBC27D97C51001A8A7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55ADADBB27D97C51001A8A7D /* MapKit.framework */; };
 		9143CCF1282094FE008D8990 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143CCF0282094FE008D8990 /* PostCell.swift */; };
 		91489004280A6230007E7E6F /* LikedGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91489003280A6230007E7E6F /* LikedGridCell.swift */; };
-		91489008280A637F007E7E6F /* LikedGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91489007280A637F007E7E6F /* LikedGridViewController.swift */; };
 		9148900A280A7F80007E7E6F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91489009280A7F80007E7E6F /* PostViewController.swift */; };
+		91BA51172827281B004813DF /* LikedGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BA51162827281B004813DF /* LikedGridViewController.swift */; };
 		ECD231D529218923C5DCF473 /* Pods_insteadOfLab6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300926084E771F00B0E4D799 /* Pods_insteadOfLab6.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +78,8 @@
 		8FA52EB90ABD1F45CACE1BCE /* Pods-insteadOfLab6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6.release.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6/Pods-insteadOfLab6.release.xcconfig"; sourceTree = "<group>"; };
 		9143CCF0282094FE008D8990 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		91489003280A6230007E7E6F /* LikedGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedGridCell.swift; sourceTree = "<group>"; };
-		91489007280A637F007E7E6F /* LikedGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedGridViewController.swift; sourceTree = "<group>"; };
 		91489009280A7F80007E7E6F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		91BA51162827281B004813DF /* LikedGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedGridViewController.swift; sourceTree = "<group>"; };
 		9985FEF1AB509DAACFED8636 /* Pods-insteadOfLab6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6.debug.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6/Pods-insteadOfLab6.debug.xcconfig"; sourceTree = "<group>"; };
 		9D9BF58F00C70456B5621CF7 /* Pods-insteadOfLab6Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6Tests.debug.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6Tests/Pods-insteadOfLab6Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5AD209EB76898A3EA0E97E4 /* Pods-insteadOfLab6-insteadOfLab6UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insteadOfLab6-insteadOfLab6UITests.debug.xcconfig"; path = "Target Support Files/Pods-insteadOfLab6-insteadOfLab6UITests/Pods-insteadOfLab6-insteadOfLab6UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,11 +151,11 @@
 				1961A34E28078FC8006BA93B /* LoginViewController.swift */,
 				1961A35028078FFF006BA93B /* FeedViewController.swift */,
 				91489003280A6230007E7E6F /* LikedGridCell.swift */,
-				91489007280A637F007E7E6F /* LikedGridViewController.swift */,
 				91489009280A7F80007E7E6F /* PostViewController.swift */,
 				19B04DAC281A00030087D031 /* SignUpViewController.swift */,
 				19B04DAE281FAD7C0087D031 /* CameraViewController.swift */,
 				9143CCF0282094FE008D8990 /* PostCell.swift */,
+				91BA51162827281B004813DF /* LikedGridViewController.swift */,
 			);
 			path = insteadOfLab6;
 			sourceTree = "<group>";
@@ -443,6 +443,7 @@
 			files = (
 				19B04DAF281FAD7C0087D031 /* CameraViewController.swift in Sources */,
 				9148900A280A7F80007E7E6F /* PostViewController.swift in Sources */,
+				91BA51172827281B004813DF /* LikedGridViewController.swift in Sources */,
 				55ADAD8F27D97BDE001A8A7D /* ViewController.swift in Sources */,
 				55ADAD8B27D97BDE001A8A7D /* AppDelegate.swift in Sources */,
 				5549B46627FFD292000E16AB /* ServicesViewController.swift in Sources */,
@@ -450,7 +451,6 @@
 				1961A34F28078FC8006BA93B /* LoginViewController.swift in Sources */,
 				91489004280A6230007E7E6F /* LikedGridCell.swift in Sources */,
 				1961A35128078FFF006BA93B /* FeedViewController.swift in Sources */,
-				91489008280A637F007E7E6F /* LikedGridViewController.swift in Sources */,
 				55ADAD8D27D97BDE001A8A7D /* SceneDelegate.swift in Sources */,
 				9143CCF1282094FE008D8990 /* PostCell.swift in Sources */,
 			);
@@ -633,7 +633,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QWSC32PDSA;
+				DEVELOPMENT_TEAM = L6FC59B756;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
@@ -668,7 +668,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QWSC32PDSA;
+				DEVELOPMENT_TEAM = L6FC59B756;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";

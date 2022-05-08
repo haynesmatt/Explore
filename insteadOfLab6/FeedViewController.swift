@@ -21,13 +21,6 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
-        
-//        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.minimumLineSpacing = 4
-//        layout.minimumInteritemSpacing = 4
-//
-//        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
-//        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -73,6 +66,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         cell.photoView.af_setImage(withURL: url, filter: filter)
         cell.photoView.layer.cornerRadius = 20
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+          gradient.frame = cell.photoView.frame
+          gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+          gradient.locations = [0.8, 1.1]
+          cell.photoView.layer.insertSublayer(gradient, at: 0)
         
         return cell
     }
