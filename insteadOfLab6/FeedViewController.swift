@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     
     var posts = [PFObject]()
+    var count: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +68,15 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.photoView.af_setImage(withURL: url, filter: filter)
         cell.photoView.layer.cornerRadius = 20
         
-        let gradient: CAGradientLayer = CAGradientLayer()
-          gradient.frame = cell.photoView.frame
-          gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-          gradient.locations = [0.8, 1.1]
-          cell.photoView.layer.insertSublayer(gradient, at: 0)
-        
+        if count <= posts.count {
+            let gradient: CAGradientLayer = CAGradientLayer()
+            gradient.frame = cell.photoView.frame
+            gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+            gradient.locations = [0.8, 1.1]
+            cell.photoView.layer.insertSublayer(gradient, at: 0)
+            count += 1
+        }
+        print(count)
         return cell
     }
     
