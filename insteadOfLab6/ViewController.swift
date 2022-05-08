@@ -86,6 +86,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             self.title = "Parking Lots"
             ceateDiningPoints()
         }
+        if (index == 6) {
+            self.title = "Printers"
+            createPrinterPoints()
+        }
     }
 
     // Launch Maps app when user taps pin drop
@@ -448,9 +452,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         }
     }
     
-    func createPrinterPoints () {
-        
-    }
+   
     
     func createParkingPoints(){
         
@@ -520,6 +522,81 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             mapView.addAnnotation(annotation)
         }
     }
+    
+    func createPrinterPoints () {
+        let locations = [
+            ["title": "KIOSK_PROD_02169", "latitude": 43.007473, "longitude": -78.785524],
+            ["title": "KIOSK_PROD_02170", "latitude": 42.999766, "longitude": -78.787897],
+            ["title": "KIOSK_PROD_02171", "latitude": 43.000555, "longitude": -78.787997],
+             
+            ["title": "KIOSK_PROD_02172", "latitude": 43.00113, "longitude": -78.788199],
+            ["title": "KIOSK_PROD_02174", "latitude": 43.000694, "longitude": -78.791763],
+            ["title": "KIOSK_PROD_02205", "latitude": 43.000792, "longitude": -78.791331],
+            
+            ["title": "KIOSK_PROD_02206", "latitude": 42.999987, "longitude": -78.786007],
+            ["title": "KIOSK_PROD_02207", "latitude": 43.000011, "longitude": -78.785977],
+            ["title": "KIOSK_PROD_02267", "latitude": 43.002617, "longitude": -78.787593],
+            
+            ["title": "KIOSK_PROD_02271", "latitude": 42.999985, "longitude": -78.785959],
+            ["title": "KIOSK_PROD_02274", "latitude": 42.999997, "longitude": -78.78594],
+            ["title": "KIOSK_PROD_02738", "latitude": 43.000551, "longitude": -78.787951],
+            
+            ["title": "KIOSK_PROD_02742", "latitude": 43.000009, "longitude": -78.786055],
+            ["title": "KIOSK_PROD_02745", "latitude": 43.00750241, "longitude": -78.78557326],
+            ["title": "KIOSK_PROD_02872", "latitude": 43.00113, "longitude": -78.788199],
+
+            ["title": "KIOSK_PROD_02873", "latitude": 43.00114546, "longitude": -78.78619017],
+            ["title": "KIOSK_PROD_02880", "latitude": 43.00027967, "longitude": -78.78606113],
+            ["title": "KIOSK_PROD_02881", "latitude": 43.00089894, "longitude": -78.78971798],
+            
+            ["title": "KIOSK_PROD_02883", "latitude": 43.00004631, "longitude": -78.78443008],
+            ["title": "KIOSK_PROD_02889", "latitude": 43.000581, "longitude": -78.78507],
+            ["title": "KIOSK_PROD_02881", "latitude": 43.00089894, "longitude": -78.78971798],
+
+            ["title": "KIOSK_PROD_02891", "latitude": 43.00030321, "longitude": -78.78605576],
+            ["title": "KIOSK_PROD_02892", "latitude": 43.00027967, "longitude": -78.78606113],
+            ["title": "KIOSK_PROD_02917", "latitude": 43.001064, "longitude": -78.78958],
+            
+            ["title": "KIOSK_PROD_03047", "latitude": 43.001794, "longitude": -78.794893],
+            ["title": "KIOSK_PROD_03048", "latitude": 43.001136, "longitude": -78.786282],
+            ["title": "KIOSK_PROD_03049", "latitude": 43.00881, "longitude": -78.785407],
+            
+            ["title": "KIOSK_PROD_03162", "latitude": 43.000945, "longitude": -78.789728],
+            ["title": "KIOSK_PROD_03163", "latitude": 43.001056, "longitude": -78.789739],
+            ["title": "KIOSK_PROD_03164", "latitude": 43.001056, "longitude": -78.789739],
+            
+            ["title": "KIOSK_PROD_03165", "latitude": 43.000921, "longitude": -78.789736],
+            ["title": "KIOSK_PROD_03166", "latitude": 43.001025, "longitude": -78.789709],
+            ["title": "KIOSK_PROD_03167", "latitude": 43.001015, "longitude": -78.789679],
+
+            ["title": "KIOSK_PROD_03168", "latitude": 43.000907, "longitude": -78.78970],
+            ["title": "KIOSK_PROD_03169", "latitude": 43.001009, "longitude": -78.78962],
+            ["title": "KIOSK_PROD_03170", "latitude": 43.001101, "longitude": -78.789668],
+
+            ["title": "KIOSK_PROD_03171", "latitude": 43.001099, "longitude": -78.78948],
+            ["title": "KIOSK_PROD_03172", "latitude": 43.001156, "longitude": -78.789649],
+            ["title": "KIOSK_PROD_03173", "latitude": 43.00115, "longitude": -78.789727],
+            
+            ["title": "KIOSK_PROD_03174", "latitude": 42.999995, "longitude": -78.785928],
+            ["title": "KIOSK_PROD_03178", "latitude": 42.999857, "longitude": -78.78715],
+            ["title": "KIOSK_PROD_03358", "latitude": 43.01197515, "longitude": -78.79318966],
+            
+            ["title": "KIOSK_PROD_03359", "latitude": 43.00519128, "longitude": -78.80088306],
+            ["title": "KIOSK_PROD_03360", "latitude": 42.99763298, "longitude": -78.78723882],
+            ["title": "KIOSK_PROD_03361", "latitude": 43.0064575, "longitude": -78.78552371],
+            
+            ["title": "KIOSK_PROD_03362", "latitude": 43.00282824, "longitude": -78.77950383],
+            ["title": "KIOSK_PROD_03363", "latitude": 42.99861396, "longitude": -78.79452687],
+         ]
+            
+        for location in locations {
+            let annotation = MKPointAnnotation()
+            annotation.title = location["title"] as? String
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! Double, longitude: location["longitude"] as! Double)
+            mapView.addAnnotation(annotation)
+            }
+    }
+    
     
 }
 

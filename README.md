@@ -27,16 +27,16 @@ Navigate, share, and discover with UB Explore. Easily find your way around UB wi
 * [X] User can view logo on app icon and launch screen
 * [X] User can view services
 * [X] User can select a service and view map location
-* [ ] User can view feed of favorite locations uploaded by others
-* [ ] User can like post and get location of post
-* [ ] User can upload their own favorite location
-* [ ] User can login/logout
+* [X] User can view feed of favorite locations uploaded by others
+* [X] User can like post and get location of post
+* [X] User can upload their own favorite location
+* [X] User can login/logout
 * [ ] User can view liked posts
 
 **Optional Nice-to-have Stories**
 * [ ] User can access settings button on home page to filter post categories on feed
 * [ ] User can select preferred campus
-* [ ] User can see a map view of all services (filtered too)
+* [X] User can choose current location for location of uploaded post
 
 ### 2. Screen Archetypes
 
@@ -138,3 +138,7 @@ Wepa API
 Sprint #2 - Video Walkthrough:
 
 <img src='http://g.recordit.co/mteo2wcelZ.gif' title='Sprint 2' alt='Sprint 2 Video Walkthrough' width=250><br>
+
+Sprint #3 & 4 - Video Walkthrough:
+
+<img src='http://g.recordit.co/bZ0BaigpXB.gif' title='Sprint 3 & 4' alt='Sprint 3 & 4 Video Walkthrough' width=250><br>
