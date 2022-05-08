@@ -16,7 +16,7 @@ class LikedGridCell: UICollectionViewCell {
     }
     
     
-    var cornerRadius: CGFloat = 5.0
+    var cornerRadius: CGFloat = 20
 
         override func awakeFromNib() {
             super.awakeFromNib()
