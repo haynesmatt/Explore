@@ -76,7 +76,6 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.photoView.layer.insertSublayer(gradient, at: 0)
             count += 1
         }
-        print(count)
         return cell
     }
     

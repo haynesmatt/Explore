@@ -23,6 +23,8 @@ extension UIView {
 }
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var frame: UIImageView!
+    @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var usernameField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
@@ -31,6 +33,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.bringSubviewToFront(logo)
 
         usernameField.attributedPlaceholder = NSAttributedString(
             string: "Username",
@@ -65,7 +69,7 @@ class LoginViewController: UIViewController {
     func addBottomBorder(box: UITextField){
             let bottomLine = CALayer()
             bottomLine.frame = CGRect(x: 0, y: box.frame.size.height - 1, width: box.frame.size.width, height: 1)
-            bottomLine.backgroundColor = UIColor.white.cgColor
+        bottomLine.backgroundColor = UIColor(hue: 0.5833, saturation: 1, brightness: 0.73, alpha: 1.0).cgColor
         box.borderStyle = .none
         box.layer.addSublayer(bottomLine)
         }
