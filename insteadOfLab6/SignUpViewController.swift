@@ -10,6 +10,7 @@ import Parse
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var usernameField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
@@ -19,12 +20,12 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         usernameField.attributedPlaceholder = NSAttributedString(
             string: "Username",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
         )
         
         passwordField.attributedPlaceholder = NSAttributedString(
             string: "Password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
         )
         addBottomBorder(box: usernameField)
         addBottomBorder(box: passwordField)
@@ -38,7 +39,7 @@ class SignUpViewController: UIViewController {
     func addBottomBorder(box: UITextField){
             let bottomLine = CALayer()
             bottomLine.frame = CGRect(x: 0, y: box.frame.size.height - 1, width: box.frame.size.width, height: 1)
-            bottomLine.backgroundColor = UIColor.white.cgColor
+            bottomLine.backgroundColor = UIColor(hue: 0.5833, saturation: 1, brightness: 0.73, alpha: 1.0).cgColor
         box.borderStyle = .none
         box.layer.addSublayer(bottomLine)
         }
@@ -49,10 +50,15 @@ class SignUpViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         
-        user.signUpInBackground{(success, error) in
+        user.signUpInBackground{ [self](success, error) in
             if success {
                 self.performSegue(withIdentifier: "signupSegue", sender: nil)
             } else{
+                errorLabel.text = "Username already exists"
+                errorLabel.textColor = .systemRed
+                errorLabel.isHidden = false
+                errorLabel.shake()
+                print("bruh")
                 print("Error: \(error?.localizedDescription)")
             }
         }

@@ -59,6 +59,12 @@ class LoginViewController: UIViewController {
             view.addGestureRecognizer(tap)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            self.navigationController?.navigationBar.isHidden = true
+        }
+    
     
     //Calls this function when the tap is recognized.
     @objc func dismissKeyboard() {
