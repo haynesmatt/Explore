@@ -74,19 +74,7 @@ class PostViewController: UIViewController, CLLocationManagerDelegate  {
                     print("Error: \(error?.localizedDescription)")
                 }
         }
-        
-        relation.add(post)
-        relation.remove(post)
-        user.saveInBackground { (succeeded, error) in
-            if (succeeded) {
-                print("This post has been added to the user's likes relation.")
-            } else {
-                print("Error: \(error?.localizedDescription)")
-            }
-        }
-        
-        
-        
+       
     }
     }
     
