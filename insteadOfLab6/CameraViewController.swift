@@ -36,9 +36,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         manager.delegate = self
         
         titleField.delegate = self
-        titleField.tag = 0
-        
         descriptionField.delegate = self
+        latitudeField.delegate = self
+        longitudeField.delegate = self
+        
         
         //Looks for single or multiple taps.
              let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -51,6 +52,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
            textField.resignFirstResponder()
            descriptionField.becomeFirstResponder()
         } else if textField == descriptionField {
+            dismissKeyboard()
+        }
+        
+        else if textField == latitudeField {
+            dismissKeyboard()
+        }
+        
+        else if textField == longitudeField {
             dismissKeyboard()
         }
        return true
@@ -91,20 +100,22 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.delegate = self
         picker.allowsEditing = true
         
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
-        }
-        else{
+       // if UIImagePickerController.isSourceTypeAvailable(.camera){
+       //     picker.sourceType = .camera
+     //   }
+      //  else{
             picker.sourceType = .photoLibrary
-        }
+    //    }
         present(picker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
         let image = info[.editedImage] as! UIImage
-        let size = CGSize(width: 320, height: 180)
-        let scaledImage = image.af_imageScaled(to: size)
-        imageView.image = scaledImage
+       // let size = CGSize(width: 320, height: 180)
+       // let scaledImage = image.af_imageScaled(to: size)
+       // imageView.image = scaledImage
+        imageView.image = image
         imageView.layer.cornerRadius = 20
         
         dismiss(animated: true, completion: nil)
