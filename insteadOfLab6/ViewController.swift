@@ -14,6 +14,7 @@ import CoreLocationUI
 class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var locationButton: CLLocationButton!
 
     let defaultAnnotation = MKPointAnnotation()
 
@@ -27,20 +28,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     var selectedAnnotation: MKPointAnnotation!
     
 
-    private func createButton() {
-        
-        let button = CLLocationButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
-        button.icon = .arrowOutline
-        button.cornerRadius = 12
-        button.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 0.9)
-        button.center = CGPoint(x: 348, y: 80)
-        
-        mapView.addSubview(button)
-        
-        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-    }
     
-    @objc func didTapButton() {
+       
+    
+    @IBAction func didTapButton() {
         
         manager.startUpdatingLocation()
         print("Location button tapped.")
@@ -56,6 +47,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationButton.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 0.9)
+
+        
         defaultAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.001784, longitude: -78.789556)
 
         let region = MKCoordinateRegion(center:defaultAnnotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
@@ -64,7 +59,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
 
         mapView.delegate = self
         manager.delegate = self
-        createButton()
  
         if (index == 1 ){
             self.title = "Buildings"
