@@ -31,9 +31,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.cornerRadius = 20
+        
+
         localeButton.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 1)
-        manager.delegate = self
+        
+        imageView.layer.cornerRadius = 20
+        
         
         titleField.delegate = self
         descriptionField.delegate = self
@@ -41,11 +44,38 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         longitudeField.delegate = self
         
         
-        //Looks for single or multiple taps.
-             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        manager.delegate = self
 
-            view.addGestureRecognizer(tap)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UITextField.keyboardWillShowNotification, object: nil);
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
     }
+   
+    var activeTextField = UITextField()
+
+       // Assign the newly active text field to your activeTextField variable
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+            self.activeTextField = textField
+       }
+    
+    @objc func keyboardWillShow(sender: NSNotification) {
+        
+        
+        if (activeTextField == latitudeField){
+            self.view.frame.origin.y = 0
+         self.view.frame.origin.y -= 180 // Move view 150 points upward
+        }
+        else if (activeTextField == longitudeField){
+            self.view.frame.origin.y = 0
+         self.view.frame.origin.y -= 200 // Move view 150 points upward
+        }
+    }
+    
+       @objc func keyboardWillHide(sender: NSNotification) {
+         self.view.frame.origin.y = 0 // Move view to original position
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == titleField {
@@ -68,6 +98,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //Calls this function when the tap is recognized.
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        
         view.endEditing(true)
     }
     
@@ -122,6 +153,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
+   
+    
+    @IBAction func tappedLocation(_ sender: Any) {
+        print("Location button tapped.")
+        manager.startUpdatingLocation()
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         guard let location = locations.first else {return}
         print(location.coordinate.latitude)                 // coordinates as stored as DOUBLES
@@ -131,16 +169,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
             self.manager.stopUpdatingLocation()
     }
+       
     
-    @IBAction func pressedLocale(_ sender: Any) {
-        manager.startUpdatingLocation()
-        print("Location button tapped.")
-    }
-    
-
-    
-    /*
-    // MARK: - Navigation
+        /*
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
