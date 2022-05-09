@@ -11,7 +11,7 @@ import Parse
 import CoreLocation
 import CoreLocationUI
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -35,6 +35,31 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         localeButton.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 1)
         manager.delegate = self
         
+        titleField.delegate = self
+        titleField.tag = 0
+        
+        descriptionField.delegate = self
+        
+        //Looks for single or multiple taps.
+             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+            view.addGestureRecognizer(tap)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == titleField {
+           textField.resignFirstResponder()
+           descriptionField.becomeFirstResponder()
+        } else if textField == descriptionField {
+            dismissKeyboard()
+        }
+       return true
+      }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {

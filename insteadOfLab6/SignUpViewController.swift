@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
     
     func addBottomBorder(box: UITextField){
             let bottomLine = CALayer()
-            bottomLine.frame = CGRect(x: 0, y: box.frame.size.height - 1, width: box.frame.size.width, height: 1)
+        bottomLine.frame = CGRect(x: 0, y: box.frame.size.height - 1, width: box.frame.size.width, height: 1)
             bottomLine.backgroundColor = UIColor(hue: 0.5833, saturation: 1, brightness: 0.73, alpha: 1.0).cgColor
         box.borderStyle = .none
         box.layer.addSublayer(bottomLine)
