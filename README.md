@@ -9,7 +9,7 @@ UB Explore
 
 ## Overview
 ### Description
-Navigate, share, and discover with UB Explore. Easily find your way around UB with a directory of essential services on and off campus. Share your favorite spots around UB with posts and its location. Discover new areas around campus with other students' posts.
+A smarter way to Explore. Navigate, share, and discover with Explore for UB. Easily find your way around UB with a directory of essential services on and off campus. Share your favorite spots around UB with posts and its location. Discover new areas around campus with other students' posts.
 
 ### App Evaluation
 - **Category:** Navigation / Social Networking
@@ -31,12 +31,12 @@ Navigate, share, and discover with UB Explore. Easily find your way around UB wi
 * [X] User can like post and get location of post
 * [X] User can upload their own favorite location
 * [X] User can login/logout
-* [ ] User can view liked posts
+* [X] User can view liked posts
 
 **Optional Nice-to-have Stories**
-* [ ] User can access settings button on home page to filter post categories on feed
-* [ ] User can select preferred campus
 * [X] User can choose current location for location of uploaded post
+* [X] User can use current location for services map
+* [X] Infinite Scroll and Auto Refresh
 
 ### 2. Screen Archetypes
 
