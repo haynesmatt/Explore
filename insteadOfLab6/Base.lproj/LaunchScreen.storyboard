@@ -15,19 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fU4-iP-Gqv">
-                                <rect key="frame" x="119.5" y="360.5" width="175" height="175"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n" translatesAutoresizingMaskIntoConstraints="NO" id="cWb-uu-MGt">
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="A0W-sj-5d7"/>
-                                    <constraint firstAttribute="height" constant="175" id="jsx-Le-SKs"/>
+                                    <constraint firstAttribute="height" constant="150" id="Zui-L7-1XA"/>
+                                    <constraint firstAttribute="width" constant="150" id="bUH-uU-3jj"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fU4-iP-Gqv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jcO-Wf-buH"/>
-                            <constraint firstItem="fU4-iP-Gqv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="n6m-LO-JcB"/>
+                            <constraint firstItem="cWb-uu-MGt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bw5-YO-sQb"/>
+                            <constraint firstItem="cWb-uu-MGt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VG9-JJ-4Oa"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="newLogo" width="1024" height="1024"/>
+        <image name="n" width="1024" height="1024"/>
     </resources>
 </document>

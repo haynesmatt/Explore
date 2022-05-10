@@ -412,7 +412,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V5y-EL-hnV">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V5y-EL-hnV">
                                 <rect key="frame" x="95" y="307" width="224" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -520,7 +520,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onSignUp:" destination="1mG-ah-Jdi" eventType="touchUpInside" id="u0Y-iR-qht"/>
-                                    <segue destination="McB-2Z-JJV" kind="presentation" identifier="signupSegue" id="19v-LE-c7Z"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Ec4-Ld-Z2b">
@@ -529,7 +528,7 @@
                                     <constraint firstAttribute="height" constant="432" id="3Vl-oQ-VHD"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-2e-cnf">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-2e-cnf">
                                 <rect key="frame" x="75" y="256" width="264" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -564,6 +563,7 @@
                         <outlet property="errorLabel" destination="9r1-2e-cnf" id="I4x-RC-Wxh"/>
                         <outlet property="passwordField" destination="ysh-5C-bOy" id="jdH-aj-YZq"/>
                         <outlet property="usernameField" destination="izP-KZ-dJv" id="f9c-61-haK"/>
+                        <segue destination="McB-2Z-JJV" kind="presentation" identifier="signupSegue" id="9nE-Dk-I0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsg-wr-Hmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -54,11 +54,10 @@ class SignUpViewController: UIViewController {
             if success {
                 self.performSegue(withIdentifier: "signupSegue", sender: nil)
             } else{
-                errorLabel.text = "Username already exists"
+                errorLabel.text = error?.localizedDescription
                 errorLabel.textColor = .systemRed
                 errorLabel.isHidden = false
                 errorLabel.shake()
-                print("bruh")
                 print("Error: \(error?.localizedDescription)")
             }
         }
