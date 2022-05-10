@@ -37,6 +37,7 @@ A smarter way to Explore. Navigate, share, and discover with Explore for UB. Eas
 * [X] User can choose current location for location of uploaded post
 * [X] User can use current location for services map
 * [X] Infinite Scroll and Auto Refresh
+* [X] Option to Auto-Fill Current Location Coordinates when uploading a post
 
 ### 2. Screen Archetypes
 
