@@ -20,6 +20,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     $0.server = "https://parseapi.back4app.com"
             }
             Parse.initialize(with: parseConfig)
+        
+        
+        // Below code will fix Navigation bar issue fixed for iOS 15.0
+        if #available(iOS 15, *) {
+                        let navigationBarAppearance = UINavigationBarAppearance()
+                        navigationBarAppearance.configureWithOpaqueBackground()
+                        navigationBarAppearance.titleTextAttributes = [
+                            NSAttributedString.Key.foregroundColor : UIColor.white
+                        ]
+                        navigationBarAppearance.backgroundColor =  UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 1)
+                        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+                        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+                        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+                    
+                   // let tabBarApperance = UITabBarAppearance()
+                   // tabBarApperance.configureWithOpaqueBackground()
+                   // tabBarApperance.backgroundColor =  UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 1)
+           // UITabBar.appearance().unselectedItemTintColor = tabBarApperance.selectionIndicatorTintColor
+
+                   // UITabBar.appearance().scrollEdgeAppearance = tabBarApperance
+                  //  UITabBar.appearance().standardAppearance = tabBarApperance
+           // UITabBar.appearance().unselectedItemTintColor = UIColor.white
+                }
         // Override point for customization after application launch.
         return true
     }
