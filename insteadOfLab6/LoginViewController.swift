@@ -21,7 +21,7 @@ extension UIView {
         propertyAnimator.startAnimation()
     }
 }
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var frame: UIImageView!
     @IBOutlet weak var logo: UIImageView!
@@ -33,6 +33,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameField.delegate = self
+        passwordField.delegate = self
+
         
         view.bringSubviewToFront(logo)
 
@@ -102,6 +106,26 @@ class LoginViewController: UIViewController {
     }
     
     
+    @objc func keyboardWillHide(sender: NSNotification) {
+      self.view.frame.origin.y = 0 // Move view to original position
+ }
+ 
+ 
+ func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+     if textField == usernameField {
+        textField.resignFirstResponder()
+        passwordField.becomeFirstResponder()
+     } else if textField == passwordField {
+         dismissKeyboard()
+     }
+     
+
+    return true
+   }
+ 
+ //Calls this function when the tap is recognized.
+
+    
 
     /*
     // MARK: - Navigation
@@ -115,3 +139,4 @@ class LoginViewController: UIViewController {
 
     
 }
+

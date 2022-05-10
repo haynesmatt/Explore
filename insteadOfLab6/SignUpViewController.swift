@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var usernameField: UITextField!
@@ -18,6 +18,10 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameField.delegate = self
+        passwordField.delegate = self
+        
         usernameField.attributedPlaceholder = NSAttributedString(
             string: "Username",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
@@ -70,5 +74,17 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameField {
+           textField.resignFirstResponder()
+           passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            dismissKeyboard()
+        }
+        
+
+       return true
+      }
+    
 
 }
