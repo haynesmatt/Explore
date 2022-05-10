@@ -39,6 +39,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
         query.limit = 20
+        query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {

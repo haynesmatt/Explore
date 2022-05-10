@@ -14,6 +14,7 @@ class LikedGridViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var collectionView: UICollectionView!
     
     var likes = [PFObject]()
+    var count: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,14 +63,38 @@ class LikedGridViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.photoView.af_setImage(withURL: url, filter: filter)
         // cell.photoView.layer.cornerRadius = 20
         
+        if count <= likes.count {
+            let gradient: CAGradientLayer = CAGradientLayer()
+            gradient.frame = cell.photoView.frame
+            gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+            gradient.locations = [0.8, 1.1]
+            cell.photoView.layer.insertSublayer(gradient, at: 0)
+            count += 1
+        }
+        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let yourWidth = collectionView.bounds.width/3.0
-        let yourHeight = yourWidth
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
 
-        return CGSize(width: yourWidth, height: yourHeight)
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+
+        var totalHeight: CGFloat = (self.view.frame.width / 3)
+        var totalWidth: CGFloat = (self.view.frame.width / 3)
+
+        print(totalWidth) // this prints 106.666666667
+
+        return CGSize(width: totalWidth, height: totalHeight)
     }
 
     // MARK: - Navigation
