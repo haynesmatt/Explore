@@ -541,11 +541,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
 
             ["title": "KIOSK_PROD_02873", "latitude": 43.00114546, "longitude": -78.78619017],
             ["title": "KIOSK_PROD_02880", "latitude": 43.00027967, "longitude": -78.78606113],
-            ["title": "KIOSK_PROD_02881", "latitude": 43.00089894, "longitude": -78.78971798],
+            
+            // 2881 WAS INCORRECT FROM API
+           // ["title": "KIOSK_PROD_02881", "latitude": 43.00089894, "longitude": -78.78971798],
             
             ["title": "KIOSK_PROD_02883", "latitude": 43.00004631, "longitude": -78.78443008],
             ["title": "KIOSK_PROD_02889", "latitude": 43.000581, "longitude": -78.78507],
-            ["title": "KIOSK_PROD_02881", "latitude": 43.00089894, "longitude": -78.78971798],
+            ["title": "KIOSK_PROD_02881", "latitude": 43.000402085740994, "longitude": -78.78621254462671],
 
             ["title": "KIOSK_PROD_02891", "latitude": 43.00030321, "longitude": -78.78605576],
             ["title": "KIOSK_PROD_02892", "latitude": 43.00027967, "longitude": -78.78606113],
