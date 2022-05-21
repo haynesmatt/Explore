@@ -1,15 +1,19 @@
-UB Explore
+Explore
 ===
+
+<img src=./img/explore-app-icon.png width="128"> <img src=./img/explore_logo.png width="360">
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
 
 ## Overview
 ### Description
-A smarter way to Explore. Navigate, share, and discover with Explore for UB. Easily find your way around UB with a directory of essential services on and off campus. Share your favorite spots around UB with posts and its location. Discover new areas around campus with other students' posts.
+A smarter way to Explore. This iOS app helps you navigate, share, and discover the top-rated locations and services near you. Easily find your way around campus with a directory of essential university services. Share your favorite nearby spots by posting pictures linked to its location, and discover posts by others. Navigate to new places with a single tap, or save the post to explore later.
+
+<img src='http://g.recordit.co/57GMdsOVix.gif' title='demo_1' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/CKyF0E3n3l.gif' title='demo_2' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/mAJgksip8E.gif' title='demo_4' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/WKpu2H8se3.gif' title='demo_3' alt='Sprint 3 & 4 Video Walkthrough' width=170>
 
 ### App Evaluation
 - **Category:** Navigation / Social Networking
@@ -83,12 +87,7 @@ A smarter way to Explore. Navigate, share, and discover with Explore for UB. Eas
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 First protoype displaying map "Services" functionality:
 
 ![](https://i.imgur.com/9AohS8o.gif)
@@ -134,12 +133,3 @@ Wepa API
 * UB Printers URL - https://api.wepanow.com/resources/groups/23/kiosks
     * (Group ID to be replaced with UB Group ID)
     * URL from - https://api.wepanow.com/docs/kiosks.htm
-
-## Sprint Progress
-Sprint #2 - Video Walkthrough:
-
-<img src='http://g.recordit.co/mteo2wcelZ.gif' title='Sprint 2' alt='Sprint 2 Video Walkthrough' width=250><br>
-
-Sprint #3 & 4 - Video Walkthrough:
-
-<img src='http://g.recordit.co/bZ0BaigpXB.gif' title='Sprint 3 & 4' alt='Sprint 3 & 4 Video Walkthrough' width=250><br>
