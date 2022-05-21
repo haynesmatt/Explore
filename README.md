@@ -11,31 +11,34 @@ Explore
 
 ## Overview
 ### Description
-A smarter way to Explore. This iOS app helps you navigate, share, and discover the top-rated locations and services near you. Easily find your way around campus with a directory of essential university services. Share your favorite nearby spots by posting pictures linked to its location, and discover posts by others. Navigate to new places with a single tap, or save the post to explore later.
+A smarter way to Explore. This iOS app helps you navigate, share, and discover the top-rated locations and services near you. Easily find your way around campus with a directory of essential campus services. Share your favorite nearby spots by posting pictures that get linked to its exact location, and discover what others have shared. Navigate to new places with a single tap, or save the post to explore later.
 
 <img src='http://g.recordit.co/57GMdsOVix.gif' title='demo_1' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/CKyF0E3n3l.gif' title='demo_2' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/mAJgksip8E.gif' title='demo_4' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/WKpu2H8se3.gif' title='demo_3' alt='Sprint 3 & 4 Video Walkthrough' width=170>
 
 ### App Evaluation
 - **Category:** Navigation / Social Networking
-- **Mobile:** This app is primarily intended to be used on mobile. Having a list of all services around UB is great for users on the go, because users can use the app on their phone to navigate to that location on campus. Scrolling functionality on the home feed is optimized for mobile devices, just like other apps where the user can quickly view and like each post. All of these features are able to be implemented on a computer, but the idea of the app is revolved around a sleek mobile interface.
-- **Story:** When we were new to UB, we all had some difficulty navigating around campus for the first-couple of weeks. It wasn't easy finding the best study locations, food spots, leisure areas, and other services around campus. This app solves all the problems of new UB students trying to familize themselves with their new enviornment. Current students will be able to share their favorite locations while discovering everything else the area has to offer. Not only does this app provide a clear directory of all services on campus, this app also includes the most up-to-date and top-rated locations on campus, uploaded by students alike.
-- **Market:** Our market is the entire student base at the University at Buffalo's North Campus. This consists of thousands of students looking for events or activities. For those users that are adventurous or curious about what events are going on on the North Campus, this app provides a great amount of value. It is a useful tool to stay updated.
+- **Mobile:** This app is primarily intended to be used on mobile. Having a list of all services around campus is great for users on the go, because users can use the app on their phone to navigate to that location on campus. Scrolling functionality on the home feed is optimized for mobile devices, just like other apps where the user can quickly view and like each post. All of these features are able to be implemented on a computer, but the idea of the app is revolved around a sleek mobile interface.
+- **Story:** When we were new to our university campus, we all had some difficulty navigating around campus for the first-couple of weeks. It wasn't easy finding the best study locations, food spots, leisure areas, and other services around campus. This app solves all the problems of new college students trying to familize themselves with their new enviornment. Current students will be able to share their favorite locations while discovering everything else the area has to offer. Not only does this app provide a clear directory of all services on campus, this app also includes the most up-to-date and top-rated locations on campus, uploaded by students alike.
+- **Market:** Our market is the entire student base at the University at Buffalo's North Campus, with plans to expand to other universities. This consists of thousands of students looking for events or activities. For those users that are adventurous or curious about what events are happening around them, this app provides a great amount of value. It is a useful tool to stay updated.
 - **Habit:** Users do not have to stay on the app for extended periods of time, so habit-forming is not too much of an issue. The app provides a quick service in finding a location or event, and users can freely share their favorite places around as much as they please.
-- **Scope:** This app's difficulty comes in form of how much research needs to be done to correctly implement our required features. Understanding how to use an API to get coordinates and storing those locations may be a challenge, but research will alleviate some of the difficulty. A bare-bone version of this app is still fun and useful to design because it solves a problem that we all had when arriving at UB for the first time. We have clear objective for this app already listed. Our final design is still in progress.  
+- **Scope:** This app's difficulty comes in form of how much research needs to be done to correctly implement our required features. Understanding how to use an API to get coordinates and storing those locations may be a challenge, but research will alleviate some of the difficulty. Navigating through documentation of an unfamiliar framework will require diligence and patience, qualities that our team owns. A bare-bone version of this app is still fun and useful to design because it solves a problem that we all had when arriving to our college campus for the first time. We have clear objectives for this app already listed. We can proudly say that our final design has met those clear-cut goals.  
 
 ## Product Spec
 
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* [X] User can view logo on app icon and launch screen
-* [X] User can view services
-* [X] User can select a service and view map location
-* [X] User can view feed of favorite locations uploaded by others
-* [X] User can like post and get location of post
-* [X] User can upload their own favorite location
-* [X] User can login/logout
+* [X] User can view a list of service categories
+* [X] User can select a service category and view a map of all locations of the service
+* [X] User can tap on the service and get redirected to Apple Maps for real-time directions
+* [X] User can view a feed of favorite locations uploaded by others
+* [X] User can save the post to the 'Saved' screen
+* [X] User can press 'Map' on a post to get redirected to Apple Maps for real-time directions
+* [X] User can upload their own favorite location by filling out certain fields
+* [X] User can login & logout
+* [X] User stays logged in across app restarts
 * [X] User can view liked posts
+* [X] Establish brand identity with an app icon & logo
 
 **Optional Nice-to-have Stories**
 * [X] User can choose current location for location of uploaded post
@@ -82,8 +85,8 @@ A smarter way to Explore. This iOS app helps you navigate, share, and discover t
 **Flow Navigation** (Screen to Screen)
 * Forced Log-in -> Account creation if no log in is available
 * Services -> Select from a list of services to find -> Map view centered on your location with waypoints of the service you selected -> Directions through Apple Maps app
-* Feed (main page) -> See locations or events posted by other users. Also interact by liking a post or get directions to the location or event.
-* Liked -> View all your liked post 
+* Feed (main page) -> See locations or events posted by other users. -> Upload a post by submitting a photo, title, description, location -> Post Screen enables user interaction Directions through Apple Maps to the location or event, and save post to "Liked" to view later.
+* Liked -> View all your liked posts
 
 
 ## Wireframes
@@ -97,19 +100,21 @@ First protoype displaying map "Services" functionality:
 ## Schema 
 ### Models
 Posts
-| Property  | Type           |Description                    |
-| --------- | -------------- |-------------------------------|
-| objectID  | Sting          | unique ID for user post       |
-| author    | Pointer to User| image author                  |
-| image     | File           | image that user posts         |
-| caption   | String         | description of image by user  |
-| likesCount| Int            | number of likes for the post  |
-| category  | String         | category for type of image    |
-| lat       | Double         | latitude of location in post  |
-| long      | Double         | longitude of location in post |
+| Property   | Type            | Description                   |
+| ---------- | --------------- | ----------------------------- |
+| objectID   | Sting           | unique ID for user post       |
+| author     | Pointer to User | image author                  |
+| image      | File            | image that user posts         |
+| title      | String          | title of image by user        |
+| description| String          | description of image by user  |
+| likes      | User Relation   | list of posts liked by user   |
+| category   | String          | category for type of image    |
+| lat        | Double          | latitude of location in post  |
+| long       | Double          | longitude of location in post |
 
 
 ### Networking
+General
 * Home Feed Screen
     * (Read/GET) Query all posts where user is author
 * View Post Screen
@@ -125,9 +130,6 @@ Posts
 * Printer Map View
     * (Read/GET) Query latitude and longitude from WEPA API
     * (Update/PUT) Query latitude and longitude from WEPA API
-
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 Wepa API 
 * UB Printers URL - https://api.wepanow.com/resources/groups/23/kiosks
