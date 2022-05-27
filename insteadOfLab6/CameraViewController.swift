@@ -13,6 +13,8 @@ import CoreLocationUI
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var tapLabel: UILabel!
+
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var localeButton: CLLocationButton!
@@ -26,30 +28,50 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var latitudeField: UITextField!
     @IBOutlet weak var longitudeField: UITextField!
     
+    @IBOutlet weak var categoryButton: UIButton!
+    
     let manager = CLLocationManager()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+    
         localeButton.backgroundColor = UIColor(red: 37/255.0, green: 90/255.0, blue: 181/255.0, alpha: 1)
         
         imageView.layer.cornerRadius = 20
-        
         
         titleField.delegate = self
         descriptionField.delegate = self
         latitudeField.delegate = self
         longitudeField.delegate = self
         
-        
         manager.delegate = self
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UITextField.keyboardWillShowNotification, object: nil);
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        
+        setPopupButton()
     }
+    
+    func setPopupButton(){
+        let optionClosure = {(action : UIAction) in
+            print(action.title)}
+                                             
+        categoryButton.menu = UIMenu(children : [
+            UIAction(title : "Other", state: .on, handler: optionClosure),
+            UIAction(title : "Food", handler: optionClosure),
+            UIAction(title : "Housing", handler: optionClosure),
+            UIAction(title : "Leisure", handler: optionClosure),
+            UIAction(title : "Nature", handler: optionClosure),
+            UIAction(title : "Shopping", handler: optionClosure),
+            UIAction(title : "Study", handler: optionClosure),
+            UIAction(title : "Views", handler: optionClosure)])
+        
+        categoryButton.showsMenuAsPrimaryAction = true
+        categoryButton.changesSelectionAsPrimaryAction = true
+    }
+    
    
     var activeTextField = UITextField()
 
@@ -110,6 +132,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["description"] = descriptionField.text!
         post["latitude"] = latitudeField.text!
         post["longitude"] = longitudeField.text!
+        post["category"] = categoryButton.currentTitle
         
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(name: "image.png", data:imageData!)
@@ -148,6 +171,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
        // imageView.image = scaledImage
         imageView.image = image
         imageView.layer.cornerRadius = 20
+        tapLabel.isHidden = true
         
         dismiss(animated: true, completion: nil)
     }

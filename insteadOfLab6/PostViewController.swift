@@ -106,8 +106,6 @@ class PostViewController: UIViewController, CLLocationManagerDelegate  {
         
         let latCast = Double(lat)
         let longCast = Double(long)
-
-        
         
         let latitude: CLLocationDegrees = latCast!
         let longitude: CLLocationDegrees = longCast!
