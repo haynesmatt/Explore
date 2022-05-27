@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5B0-nx-Ooe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5B0-nx-Ooe">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-91-3PJ">
-                                <rect key="frame" x="7" y="133" width="177" height="111"/>
+                                <rect key="frame" x="7" y="133" width="198" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="Ilf-ke-YJS"/>
+                                    <constraint firstAttribute="width" constant="198" id="Ilf-ke-YJS"/>
                                     <constraint firstAttribute="height" constant="111" id="mFO-rU-B1V"/>
                                 </constraints>
                                 <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Buildings" imagePadding="2" cornerStyle="large" titleAlignment="automatic">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Buildings       " imagePadding="2" cornerStyle="large" titleAlignment="automatic">
                                     <imageReference key="image" image="building.2.crop.circle" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -38,16 +38,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-Zn-pvx">
-                                <rect key="frame" x="244" y="133" width="177" height="111"/>
+                                <rect key="frame" x="223" y="133" width="198" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="17Q-dJ-tzz"/>
-                                    <constraint firstAttribute="width" constant="177" id="I3S-HQ-xTg"/>
+                                    <constraint firstAttribute="width" constant="198" id="I3S-HQ-xTg"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="fwC-0a-uzh"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="qyv-bu-1SG"/>
                                 </constraints>
                                 <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Parking" imagePadding="16" cornerStyle="large" titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Parking       " imagePadding="16" cornerStyle="large" titleAlignment="center">
                                     <imageReference key="image" image="parkingsign.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -58,14 +58,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajK-lQ-dR4">
-                                <rect key="frame" x="7" y="260" width="177" height="111"/>
+                                <rect key="frame" x="7" y="260" width="198" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="CEW-Ty-sxY"/>
+                                    <constraint firstAttribute="width" constant="198" id="CEW-Ty-sxY"/>
                                     <constraint firstAttribute="height" constant="111" id="WF7-z0-XKo"/>
                                 </constraints>
                                 <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Student Housing" imagePadding="1" cornerStyle="large" titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Student           Housing " imagePadding="1" cornerStyle="large" titleAlignment="center">
                                     <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="47" scale="large" weight="semibold"/>
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -76,16 +76,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRb-8Z-oc5">
-                                <rect key="frame" x="244" y="260" width="177" height="111"/>
+                                <rect key="frame" x="223" y="260" width="198" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="6u3-z8-Big"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="FnH-eG-D6A"/>
                                     <constraint firstAttribute="height" constant="111" id="PWl-5e-jS9"/>
-                                    <constraint firstAttribute="width" constant="177" id="a1d-vk-fye"/>
+                                    <constraint firstAttribute="width" constant="198" id="a1d-vk-fye"/>
                                 </constraints>
                                 <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Bike Racks" imagePadding="28" cornerStyle="large" titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Bike         Racks" imagePadding="28" cornerStyle="large" titleAlignment="center">
                                     <imageReference key="image" image="bicycle.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -96,14 +96,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-VL-u3J">
-                                <rect key="frame" x="7" y="387" width="177" height="111"/>
+                                <rect key="frame" x="7" y="387" width="198" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="5iB-Hx-nc0"/>
+                                    <constraint firstAttribute="width" constant="198" id="5iB-Hx-nc0"/>
                                     <constraint firstAttribute="height" constant="111" id="t7i-CW-k4h"/>
                                 </constraints>
                                 <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Dining" imagePadding="25" cornerStyle="large" titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Dining       " imagePadding="25" cornerStyle="large" titleAlignment="center">
                                     <imageReference key="image" image="fork.knife.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -114,16 +114,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-M4-aqF">
-                                <rect key="frame" x="244" y="387" width="177" height="111"/>
+                                <rect key="frame" x="223" y="387" width="198" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="Nm3-yc-hpf"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="SHQ-A6-Z2f"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="Ye7-Ew-wKO"/>
-                                    <constraint firstAttribute="width" constant="177" id="laW-cr-qIC"/>
+                                    <constraint firstAttribute="width" constant="198" id="laW-cr-qIC"/>
                                 </constraints>
                                 <color key="tintColor" red="0.14509806040000001" green="0.35294118520000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Printers" imagePadding="1" cornerStyle="large" titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Printers          " imagePadding="1" cornerStyle="large" titleAlignment="center">
                                     <imageReference key="image" image="printer.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="51" scale="large" weight="semibold"/>
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qj-zB-4wX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-607" y="-459"/>
+            <point key="canvasLocation" x="-607.00934579439252" y="-459.3952483801296"/>
         </scene>
         <!--Map-->
         <scene sceneID="tne-QT-ifu">
@@ -211,10 +211,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wHQ-Vp-VYk">
-                                <rect key="frame" x="-16" y="0.0" width="460" height="700.33333333333337"/>
+                                <rect key="frame" x="-16" y="0.0" width="460" height="666.33333333333337"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jfp-Qw-6sI">
-                                <rect key="frame" x="89" y="796" width="250" height="60"/>
+                                <rect key="frame" x="89" y="762" width="250" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EB-4r-L7g">
                                         <rect key="frame" x="0.0" y="0.0" width="121" height="60"/>
@@ -247,7 +247,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Of Place" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqI-4J-Vxt">
-                                <rect key="frame" x="20" y="716.33333333333337" width="388" height="22"/>
+                                <rect key="frame" x="20" y="682.33333333333337" width="388" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="8fh-VM-8yd"/>
                                 </constraints>
@@ -256,7 +256,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a description of the post. This is where the location will be decribed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zjb-SX-a0b">
-                                <rect key="frame" x="20" y="746.33333333333337" width="388" height="33.666666666666629"/>
+                                <rect key="frame" x="20" y="712.33333333333337" width="388" height="33.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33.670000000000002" id="1ax-Nl-4tG"/>
                                 </constraints>
@@ -491,7 +491,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izP-KZ-dJv">
-                                <rect key="frame" x="48" y="340" width="332" height="34"/>
+                                <rect key="frame" x="48" y="306" width="332" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="jj4-ph-cJP"/>
                                 </constraints>
@@ -500,7 +500,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysh-5C-bOy">
-                                <rect key="frame" x="48" y="431" width="332" height="34"/>
+                                <rect key="frame" x="48" y="397" width="332" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="umT-en-kAY"/>
                                 </constraints>
@@ -509,7 +509,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cb-Wa-M7B">
-                                <rect key="frame" x="68" y="509" width="292" height="40"/>
+                                <rect key="frame" x="68" y="475" width="292" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LOj-YP-oVg"/>
                                 </constraints>
@@ -526,13 +526,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Ec4-Ld-Z2b">
-                                <rect key="frame" x="-9" y="-144" width="446" height="432"/>
+                                <rect key="frame" x="-9" y="-178" width="446" height="432"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="432" id="3Vl-oQ-VHD"/>
                                 </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-2e-cnf">
-                                <rect key="frame" x="75" y="286" width="278" height="21"/>
+                                <rect key="frame" x="75" y="252" width="278" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -680,7 +680,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Submission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgt-WJ-73W">
-                                <rect key="frame" x="135.66666666666666" y="29" width="156.99999999999997" height="66"/>
+                                <rect key="frame" x="135.66666666666666" y="-15" width="156.99999999999997" height="110"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
