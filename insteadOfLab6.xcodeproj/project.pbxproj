@@ -636,7 +636,7 @@
 				DEVELOPMENT_TEAM = L6FC59B756;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
+				INFOPLIST_KEY_CFBundleDisplayName = Explore;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "UB Explore needs your location to show your location on the map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Finding your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -671,7 +671,7 @@
 				DEVELOPMENT_TEAM = L6FC59B756;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insteadOfLab6/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "UB Explore";
+				INFOPLIST_KEY_CFBundleDisplayName = Explore;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "UB Explore needs your location to show your location on the map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Finding your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
