@@ -91,6 +91,10 @@ A smarter way to Explore. This iOS app helps you navigate, share, and discover t
 
 ## Wireframes
 
+Hand-drawn mockup:
+
+<img src=./img/wireframe.jpeg width="360">
+
 First protoype displaying map "Services" functionality:
 
 ![](https://i.imgur.com/9AohS8o.gif)
