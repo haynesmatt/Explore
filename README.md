@@ -11,7 +11,7 @@ Explore
 
 ## Overview
 ### Description
-A smarter way to Explore. This iOS app helps you navigate, share, and discover the top-rated locations and services near you. Easily find your way around campus with a directory of essential campus services. Share your favorite nearby spots by posting pictures that get linked to its exact location, and discover what others have shared. Navigate to new places with a single tap, or save the post to explore later.
+Explore is an iOS app that makes navigating college campuses simple, social, and fun! We’ve combined regular campus maps with GPS, so you can get instant directions to anything on campus. See where other students are visiting by scrolling through the social feed, and tap a single button for step by step directions there!
 
 <img src='http://g.recordit.co/57GMdsOVix.gif' title='demo_1' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/CKyF0E3n3l.gif' title='demo_2' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/mAJgksip8E.gif' title='demo_4' alt='Sprint 3 & 4 Video Walkthrough' width=170>ㅤㅤ<img src='http://g.recordit.co/WKpu2H8se3.gif' title='demo_3' alt='Sprint 3 & 4 Video Walkthrough' width=170>
 
